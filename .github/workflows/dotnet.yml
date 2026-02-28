@@ -38,7 +38,9 @@ jobs:
 
     # Regular unit tests (EXCLUDE integration)
     - name: Unit tests
-      run: dotnet test --filter "TestCategory!=Integration" --coverage --report-trx
+      run: |
+        cd src
+        dotnet test --filter "TestCategory!=Integration" --coverage --report-trx
 
     - name: Build
       run: |
