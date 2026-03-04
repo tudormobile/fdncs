@@ -47,7 +47,7 @@ public partial interface IFinancialDataClient
     /// See: https://financialdata.net/documentation#operation/getEtfSymbols
     /// </remarks>
     Task<FinancialDataResponse<List<Symbol>>> GetEtfSymbolsAsync(int offset = 0, CancellationToken cancellationToken = default)
-        => GetApiResultAsync<List<Symbol>>($"international-stock-symbols?offset={offset}", cancellationToken);
+        => GetApiResultAsync<List<Symbol>>($"etf-symbols?offset={offset}", cancellationToken);
 
     /// <summary>
     /// Retrieves a list of commodity symbols.
