@@ -7,67 +7,67 @@ namespace Tudormobile.FinancialData.Entities;
 public record ExecutiveCompensation
 {
     /// <summary>
-    /// Gets or sets the trading symbol of the company.
+    /// Gets the trading symbol of the company.
     /// </summary>
     public string? TradingSymbol { get; init; }
 
     /// <summary>
-    /// Gets or sets the central index key (CIK) assigned by the SEC.
+    /// Gets the central index key (CIK) assigned by the SEC.
     /// </summary>
     public string? CentralIndexKey { get; init; }
 
     /// <summary>
-    /// Gets or sets the registrant name of the company.
+    /// Gets the registrant name of the company.
     /// </summary>
     public string? RegistrantName { get; init; }
 
     /// <summary>
-    /// Gets or sets the name of the executive.
+    /// Gets the name of the executive.
     /// </summary>
     public string? ExecutiveName { get; init; }
 
     /// <summary>
-    /// Gets or sets the position or title of the executive.
+    /// Gets the position or title of the executive.
     /// </summary>
     public string? ExecutiveTitle { get; init; }
 
     /// <summary>
-    /// Gets or sets the fiscal year.
+    /// Gets the fiscal year.
     /// </summary>
     public string? FiscalYear { get; init; }
 
     /// <summary>
-    /// Gets or sets the base salary.
+    /// Gets the base salary.
     /// </summary>
     public decimal Salary { get; init; }
 
     /// <summary>
-    /// Gets or sets the bonus amount.
+    /// Gets the bonus amount.
     /// </summary>
     public decimal Bonus { get; init; }
 
     /// <summary>
-    /// Gets or sets the value of stock awards.
+    /// Gets the value of stock awards.
     /// </summary>
     public decimal StockAwards { get; init; }
 
     /// <summary>
-    /// Gets or sets the value of option awards.
+    /// Gets the value of option awards.
     /// </summary>
     public decimal OptionAwards { get; init; }
 
     /// <summary>
-    /// Gets or sets the non-equity incentive plan compensation.
+    /// Gets the non-equity incentive plan compensation.
     /// </summary>
     public decimal NonEquityIncentivePlanCompensation { get; init; }
 
     /// <summary>
-    /// Gets or sets all other compensation.
+    /// Gets all other compensation.
     /// </summary>
     public decimal AllOtherCompensation { get; init; }
 
     /// <summary>
-    /// Gets or sets the total compensation.
+    /// Gets the total compensation.
     /// </summary>
     public decimal TotalCompensation { get; init; }
 }

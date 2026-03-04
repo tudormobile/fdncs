@@ -10,157 +10,157 @@
 public record BalanceSheet
 {
     /// <summary>
-    /// Gets or sets the trading symbol of the security.
+    /// Gets the trading symbol of the security.
     /// </summary>
     public string? TradingSymbol { get; init; }
 
     /// <summary>
-    /// Gets or sets the unique identifier for the central index associated with this balance sheet.
+    /// Gets the unique identifier for the central index associated with this balance sheet.
     /// </summary>
     public string? CentralIndexKey { get; init; }
 
     /// <summary>
-    /// Gets or sets the registrant name.
+    /// Gets the registrant name.
     /// </summary>
     public string? RegistrantName { get; init; }
 
     /// <summary>
-    /// Gets or sets the fiscal year.
+    /// Gets the fiscal year.
     /// </summary>
     public string? FiscalYear { get; init; }
 
     /// <summary>
-    /// Gets or sets the fiscal period associated with the financial data.
+    /// Gets the fiscal period associated with the financial data.
     /// </summary>
     public string? FiscalPeriod { get; init; }
 
     /// <summary>
-    /// Gets or sets the period end date.
+    /// Gets the period end date.
     /// </summary>
     public DateOnly PeriodEndDate { get; init; }
 
     /// <summary>
-    /// Gets or sets cash and cash equivalents.
+    /// Gets cash and cash equivalents.
     /// </summary>
     public decimal CashAndCashEquivalents { get; init; }
 
     /// <summary>
-    /// Gets or sets the value of marketable securities classified as current assets on the balance sheet.
+    /// Gets the value of marketable securities classified as current assets on the balance sheet.
     /// </summary>
     public decimal MarketableSecuritiesCurrent { get; init; }
 
     /// <summary>
-    /// Gets or sets accounts receivable.
+    /// Gets accounts receivable.
     /// </summary>
     public decimal AccountsReceivable { get; init; }
 
     /// <summary>
-    /// Gets or sets inventories.
+    /// Gets inventories.
     /// </summary>
     public decimal Inventories { get; init; }
 
     /// <summary>
-    /// Gets or sets non-trade receivables.
+    /// Gets non-trade receivables.
     /// </summary>
     public decimal NonTradeReceivables { get; init; }
 
     /// <summary>
-    /// Gets or sets other current assets.
+    /// Gets other current assets.
     /// </summary>
     public decimal OtherAssetsCurrent { get; init; }
 
     /// <summary>
-    /// Gets or sets total current assets.
+    /// Gets total current assets.
     /// </summary>
     public decimal TotalAssetsCurrent { get; init; }
 
     /// <summary>
-    /// Gets or sets non-current marketable securities.
+    /// Gets non-current marketable securities.
     /// </summary>
     public decimal MarketableSecuritiesNonCurrent { get; init; }
 
     /// <summary>
-    /// Gets or sets property, plant, and equipment.
+    /// Gets property, plant, and equipment.
     /// </summary>
     public decimal PropertyPlantAndEquipment { get; init; }
 
     /// <summary>
-    /// Gets or sets other non-current assets.
+    /// Gets other non-current assets.
     /// </summary>
     public decimal OtherAssetsNonCurrent { get; init; }
 
     /// <summary>
-    /// Gets or sets total non-current assets.
+    /// Gets total non-current assets.
     /// </summary>
     public decimal TotalAssetsNonCurrent { get; init; }
 
     /// <summary>
-    /// Gets or sets total assets.
+    /// Gets total assets.
     /// </summary>
     public decimal TotalAssets { get; init; }
 
     /// <summary>
-    /// Gets or sets accounts payable.
+    /// Gets accounts payable.
     /// </summary>
     public decimal AccountsPayable { get; init; }
 
     /// <summary>
-    /// Gets or sets deferred revenue.
+    /// Gets deferred revenue.
     /// </summary>
     public decimal DeferredRevenue { get; init; }
 
     /// <summary>
-    /// Gets or sets short-term debt.
+    /// Gets short-term debt.
     /// </summary>
     public decimal ShortTermDebt { get; init; }
 
     /// <summary>
-    /// Gets or sets other current liabilities.
+    /// Gets other current liabilities.
     /// </summary>
     public decimal OtherLiabilitiesCurrent { get; init; }
 
     /// <summary>
-    /// Gets or sets total current liabilities.
+    /// Gets total current liabilities.
     /// </summary>
     public decimal TotalLiabilitiesCurrent { get; init; }
 
     /// <summary>
-    /// Gets or sets long-term debt.
+    /// Gets long-term debt.
     /// </summary>
     public decimal LongTermDebt { get; init; }
 
     /// <summary>
-    /// Gets or sets other non-current liabilities.
+    /// Gets other non-current liabilities.
     /// </summary>
     public decimal OtherLiabilitiesNonCurrent { get; init; }
 
     /// <summary>
-    /// Gets or sets total non-current liabilities.
+    /// Gets total non-current liabilities.
     /// </summary>
     public decimal TotalLiabilitiesNonCurrent { get; init; }
 
     /// <summary>
-    /// Gets or sets total liabilities.
+    /// Gets total liabilities.
     /// </summary>
     public decimal TotalLiabilities { get; init; }
 
     /// <summary>
-    /// Gets or sets common stock.
+    /// Gets common stock.
     /// </summary>
     public decimal CommonStock { get; init; }
 
     /// <summary>
-    /// Gets or sets retained earnings.
+    /// Gets retained earnings.
     /// </summary>
     public decimal RetainedEarnings { get; init; }
 
     /// <summary>
-    /// Gets or sets accumulated other comprehensive income.
+    /// Gets accumulated other comprehensive income.
     /// </summary>
     public decimal AccumulatedOtherComprehensiveIncome { get; init; }
 
     /// <summary>
-    /// Gets or sets total shareholders' equity.
+    /// Gets total shareholders' equity.
     /// </summary>
     public decimal TotalShareholdersEquity { get; init; }
 

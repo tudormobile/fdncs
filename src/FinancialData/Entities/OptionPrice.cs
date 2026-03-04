@@ -7,37 +7,37 @@ namespace Tudormobile.FinancialData.Entities;
 public record OptionPrice
 {
     /// <summary>
-    /// Gets or sets the option contract name.
+    /// Gets the option contract name.
     /// </summary>
     public string? ContractName { get; init; }
 
     /// <summary>
-    /// Gets or sets the date of the price record.
+    /// Gets the date of the price record.
     /// </summary>
     public DateOnly Date { get; init; }
 
     /// <summary>
-    /// Gets or sets the opening price.
+    /// Gets the opening price.
     /// </summary>
     public decimal Open { get; init; }
 
     /// <summary>
-    /// Gets or sets the highest price.
+    /// Gets the highest price.
     /// </summary>
     public decimal High { get; init; }
 
     /// <summary>
-    /// Gets or sets the lowest price.
+    /// Gets the lowest price.
     /// </summary>
     public decimal Low { get; init; }
 
     /// <summary>
-    /// Gets or sets the closing price.
+    /// Gets the closing price.
     /// </summary>
     public decimal Close { get; init; }
 
     /// <summary>
-    /// Gets or sets the trading volume.
+    /// Gets the trading volume.
     /// </summary>
     public decimal Volume { get; init; }
 }

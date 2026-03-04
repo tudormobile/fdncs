@@ -7,22 +7,22 @@ namespace Tudormobile.FinancialData.Entities;
 public record SplitsCalendar
 {
     /// <summary>
-    /// Gets or sets the trading symbol of the company.
+    /// Gets the trading symbol of the company.
     /// </summary>
     public string? TradingSymbol { get; init; }
 
     /// <summary>
-    /// Gets or sets the registrant name of the company.
+    /// Gets the registrant name of the company.
     /// </summary>
     public string? RegistrantName { get; init; }
 
     /// <summary>
-    /// Gets or sets the execution date of the stock split.
+    /// Gets the execution date of the stock split.
     /// </summary>
     public DateOnly ExecutionDate { get; init; }
 
     /// <summary>
-    /// Gets or sets the split multiplier (e.g., 1.5 for 3-for-2 split).
+    /// Gets the split multiplier (e.g., 1.5 for 3-for-2 split).
     /// </summary>
     public decimal Multiplier { get; init; }
 }

@@ -7,32 +7,32 @@ namespace Tudormobile.FinancialData.Entities;
 public record SecuritiesInformation
 {
     /// <summary>
-    /// Gets or sets the trading symbol of the security.
+    /// Gets the trading symbol of the security.
     /// </summary>
     public string? TradingSymbol { get; init; }
 
     /// <summary>
-    /// Gets or sets the name of the issuer.
+    /// Gets the name of the issuer.
     /// </summary>
     public string? IssuerName { get; init; }
 
     /// <summary>
-    /// Gets or sets the CUSIP number.
+    /// Gets the CUSIP number.
     /// </summary>
     public string? CusipNumber { get; init; }
 
     /// <summary>
-    /// Gets or sets the ISIN number.
+    /// Gets the ISIN number.
     /// </summary>
     public string? IsinNumber { get; init; }
 
     /// <summary>
-    /// Gets or sets the FIGI (Financial Instrument Global Identifier).
+    /// Gets the FIGI (Financial Instrument Global Identifier).
     /// </summary>
     public string? FigiIdentifier { get; init; }
 
     /// <summary>
-    /// Gets or sets the type of security.
+    /// Gets the type of security.
     /// </summary>
     public string? SecurityType { get; init; }
 }

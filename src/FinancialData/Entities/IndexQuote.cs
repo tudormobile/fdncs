@@ -7,34 +7,34 @@ namespace Tudormobile.FinancialData.Entities;
 public record IndexQuote
 {
     /// <summary>
-    /// Gets or sets the trading symbol of the market index.
+    /// Gets the trading symbol of the market index.
     /// </summary>
     public string? TradingSymbol { get; init; }
 
     /// <summary>
-    /// Gets or sets the name of the market index.
+    /// Gets the name of the market index.
     /// </summary>
     public string? IndexName { get; init; }
 
     /// <summary>
-    /// Gets or sets the time of the quote.
+    /// Gets the time of the quote.
     /// </summary>
     public DateTime? Time { get; init; }
 
     /// <summary>
-    /// Gets or sets the current price of the index.
+    /// Gets the current price of the index.
     /// </summary>
-    public decimal? Price { get; init; }
+    public decimal Price { get; init; }
 
     /// <summary>
-    /// Gets or sets the price change.
+    /// Gets the price change.
     /// </summary>
-    public decimal? Change { get; init; }
+    public decimal Change { get; init; }
 
     /// <summary>
-    /// Gets or sets the percentage change in price.
+    /// Gets the percentage change in price.
     /// </summary>
-    public decimal? PercentageChange { get; init; }
+    public decimal PercentageChange { get; init; }
 }
 /* ref: https://financialdata.net/documentation#index_quotes
 {

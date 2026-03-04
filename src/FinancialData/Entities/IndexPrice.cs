@@ -7,39 +7,39 @@ namespace Tudormobile.FinancialData.Entities;
 public record IndexPrice
 {
     /// <summary>
-    /// Gets or sets the trading symbol of the market index.
+    /// Gets the trading symbol of the market index.
     /// </summary>
     public string? TradingSymbol { get; init; }
 
     /// <summary>
-    /// Gets or sets the date of the price record.
+    /// Gets the date of the price record.
     /// </summary>
     public DateOnly? Date { get; init; }
 
     /// <summary>
-    /// Gets or sets the opening price of the index for the trading period.
+    /// Gets the opening price of the index for the trading period.
     /// </summary>
-    public decimal? Open { get; init; }
+    public decimal Open { get; init; }
 
     /// <summary>
-    /// Gets or sets the highest price recorded during the trading period.
+    /// Gets the highest price recorded during the trading period.
     /// </summary>
-    public decimal? High { get; init; }
+    public decimal High { get; init; }
 
     /// <summary>
-    /// Gets or sets the lowest price recorded during the trading period.
+    /// Gets the lowest price recorded during the trading period.
     /// </summary>
-    public decimal? Low { get; init; }
+    public decimal Low { get; init; }
 
     /// <summary>
-    /// Gets or sets the closing price of the index for the trading period.
+    /// Gets the closing price of the index for the trading period.
     /// </summary>
-    public decimal? Close { get; init; }
+    public decimal Close { get; init; }
 
     /// <summary>
-    /// Gets or sets the total traded volume for the index.
+    /// Gets the total traded volume for the index.
     /// </summary>
-    public decimal? Volume { get; init; }
+    public decimal Volume { get; init; }
 }
 /* ref: https://financialdata.net/documentation#index_prices
 {

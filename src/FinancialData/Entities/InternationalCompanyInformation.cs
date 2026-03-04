@@ -7,52 +7,52 @@ namespace Tudormobile.FinancialData.Entities;
 public record InternationalCompanyInformation
 {
     /// <summary>
-    /// Gets or sets the trading symbol of the company.
+    /// Gets the trading symbol of the company.
     /// </summary>
     public string? TradingSymbol { get; init; }
 
     /// <summary>
-    /// Gets or sets the registrant name of the company.
+    /// Gets the registrant name of the company.
     /// </summary>
     public string? RegistrantName { get; init; }
 
     /// <summary>
-    /// Gets or sets the stock exchange where the company is listed.
+    /// Gets the stock exchange where the company is listed.
     /// </summary>
     public string? Exchange { get; init; }
 
     /// <summary>
-    /// Gets or sets the ISIN (International Securities Identification Number).
+    /// Gets the ISIN (International Securities Identification Number).
     /// </summary>
     public string? IsinNumber { get; init; }
 
     /// <summary>
-    /// Gets or sets the industry classification.
+    /// Gets the industry classification.
     /// </summary>
     public string? Industry { get; init; }
 
     /// <summary>
-    /// Gets or sets the founding date.
+    /// Gets the founding date.
     /// </summary>
     public string? FoundingDate { get; init; }
 
     /// <summary>
-    /// Gets or sets the name of the chief executive officer.
+    /// Gets the name of the chief executive officer.
     /// </summary>
     public string? ChiefExecutiveOfficer { get; init; }
 
     /// <summary>
-    /// Gets or sets the number of employees.
+    /// Gets the number of employees.
     /// </summary>
     public int NumberOfEmployees { get; init; }
 
     /// <summary>
-    /// Gets or sets the company website URL.
+    /// Gets the company website URL.
     /// </summary>
     public string? Website { get; init; }
 
     /// <summary>
-    /// Gets or sets the company description.
+    /// Gets the company description.
     /// </summary>
     public string? Description { get; init; }
 }

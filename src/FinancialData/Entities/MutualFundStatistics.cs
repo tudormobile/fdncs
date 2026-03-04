@@ -1,4 +1,4 @@
-﻿namespace Tudormobile.FinancialData.Entities;
+namespace Tudormobile.FinancialData.Entities;
 
 /// <summary>
 /// Represents a collection of key financial and performance statistics for a mutual fund over a specified reporting
@@ -7,129 +7,129 @@
 public record MutualFundStatistics
 {
     /// <summary>
-    /// Gets or sets the unique central index key for the mutual fund.
+    /// Gets the unique central index key for the mutual fund.
     /// </summary>
     public string? CentralIndexKey { get; init; }
 
     /// <summary>
-    /// Gets or sets the name of the registrant (fund family or provider).
+    /// Gets the name of the registrant (fund family or provider).
     /// </summary>
     public string? RegistrantName { get; init; }
 
     /// <summary>
-    /// Gets or sets the period of report (end date of the reporting period).
+    /// Gets the period of report (end date of the reporting period).
     /// </summary>
     public DateOnly? PeriodOfReport { get; init; }
 
     /// <summary>
-    /// Gets or sets the name of the mutual fund.
+    /// Gets the name of the mutual fund.
     /// </summary>
     public string? FundName { get; init; }
 
     /// <summary>
-    /// Gets or sets the symbol of the mutual fund.
+    /// Gets the symbol of the mutual fund.
     /// </summary>
     public string? FundSymbol { get; init; }
 
     /// <summary>
-    /// Gets or sets the series ID of the mutual fund.
+    /// Gets the series ID of the mutual fund.
     /// </summary>
     public string? SeriesId { get; init; }
 
     /// <summary>
-    /// Gets or sets the class ID of the mutual fund.
+    /// Gets the class ID of the mutual fund.
     /// </summary>
     public string? ClassId { get; init; }
 
     /// <summary>
-    /// Gets or sets the total assets of the mutual fund.
+    /// Gets the total assets of the mutual fund.
     /// </summary>
-    public decimal? TotalAssets { get; init; }
+    public decimal TotalAssets { get; init; }
 
     /// <summary>
-    /// Gets or sets the total liabilities of the mutual fund.
+    /// Gets the total liabilities of the mutual fund.
     /// </summary>
-    public decimal? TotalLiabilities { get; init; }
+    public decimal TotalLiabilities { get; init; }
 
     /// <summary>
-    /// Gets or sets the net assets of the mutual fund.
+    /// Gets the net assets of the mutual fund.
     /// </summary>
-    public decimal? NetAssets { get; init; }
+    public decimal NetAssets { get; init; }
 
     /// <summary>
-    /// Gets or sets the return for the preceding month 1 (as a percentage).
+    /// Gets the return for the preceding month 1 (as a percentage).
     /// </summary>
-    public decimal? ReturnPrecedingMonth1 { get; init; }
+    public decimal ReturnPrecedingMonth1 { get; init; }
 
     /// <summary>
-    /// Gets or sets the return for the preceding month 2 (as a percentage).
+    /// Gets the return for the preceding month 2 (as a percentage).
     /// </summary>
-    public decimal? ReturnPrecedingMonth2 { get; init; }
+    public decimal ReturnPrecedingMonth2 { get; init; }
 
     /// <summary>
-    /// Gets or sets the return for the preceding month 3 (as a percentage).
+    /// Gets the return for the preceding month 3 (as a percentage).
     /// </summary>
-    public decimal? ReturnPrecedingMonth3 { get; init; }
+    public decimal ReturnPrecedingMonth3 { get; init; }
 
     /// <summary>
-    /// Gets or sets the realized gain for the preceding month 1.
+    /// Gets the realized gain for the preceding month 1.
     /// </summary>
-    public decimal? RealizedGainPrecedingMonth1 { get; init; }
+    public decimal RealizedGainPrecedingMonth1 { get; init; }
 
     /// <summary>
-    /// Gets or sets the change in unrealized appreciation for the preceding month 1.
+    /// Gets the change in unrealized appreciation for the preceding month 1.
     /// </summary>
-    public decimal? ChangeInUnrealizedAppreciationPrecedingMonth1 { get; init; }
+    public decimal ChangeInUnrealizedAppreciationPrecedingMonth1 { get; init; }
 
     /// <summary>
-    /// Gets or sets the realized gain for the preceding month 2.
+    /// Gets the realized gain for the preceding month 2.
     /// </summary>
-    public decimal? RealizedGainPrecedingMonth2 { get; init; }
+    public decimal RealizedGainPrecedingMonth2 { get; init; }
 
     /// <summary>
-    /// Gets or sets the change in unrealized appreciation for the preceding month 2.
+    /// Gets the change in unrealized appreciation for the preceding month 2.
     /// </summary>
-    public decimal? ChangeInUnrealizedAppreciationPrecedingMonth2 { get; init; }
+    public decimal ChangeInUnrealizedAppreciationPrecedingMonth2 { get; init; }
 
     /// <summary>
-    /// Gets or sets the realized gain for the preceding month 3.
+    /// Gets the realized gain for the preceding month 3.
     /// </summary>
-    public decimal? RealizedGainPrecedingMonth3 { get; init; }
+    public decimal RealizedGainPrecedingMonth3 { get; init; }
 
     /// <summary>
-    /// Gets or sets the change in unrealized appreciation for the preceding month 3.
+    /// Gets the change in unrealized appreciation for the preceding month 3.
     /// </summary>
-    public decimal? ChangeInUnrealizedAppreciationPrecedingMonth3 { get; init; }
+    public decimal ChangeInUnrealizedAppreciationPrecedingMonth3 { get; init; }
 
     /// <summary>
-    /// Gets or sets the share sale amount for the preceding month 1.
+    /// Gets the share sale amount for the preceding month 1.
     /// </summary>
-    public decimal? ShareSalePrecedingMonth1 { get; init; }
+    public decimal ShareSalePrecedingMonth1 { get; init; }
 
     /// <summary>
-    /// Gets or sets the share redemption amount for the preceding month 1.
+    /// Gets the share redemption amount for the preceding month 1.
     /// </summary>
-    public decimal? ShareRedemptionPrecedingMonth1 { get; init; }
+    public decimal ShareRedemptionPrecedingMonth1 { get; init; }
 
     /// <summary>
-    /// Gets or sets the share sale amount for the preceding month 2.
+    /// Gets the share sale amount for the preceding month 2.
     /// </summary>
-    public decimal? ShareSalePrecedingMonth2 { get; init; }
+    public decimal ShareSalePrecedingMonth2 { get; init; }
 
     /// <summary>
-    /// Gets or sets the share redemption amount for the preceding month 2.
+    /// Gets the share redemption amount for the preceding month 2.
     /// </summary>
-    public decimal? ShareRedemptionPrecedingMonth2 { get; init; }
+    public decimal ShareRedemptionPrecedingMonth2 { get; init; }
 
     /// <summary>
-    /// Gets or sets the share sale amount for the preceding month 3.
+    /// Gets the share sale amount for the preceding month 3.
     /// </summary>
-    public decimal? ShareSalePrecedingMonth3 { get; init; }
+    public decimal ShareSalePrecedingMonth3 { get; init; }
 
     /// <summary>
-    /// Gets or sets the share redemption amount for the preceding month 3.
+    /// Gets the share redemption amount for the preceding month 3.
     /// </summary>
-    public decimal? ShareRedemptionPrecedingMonth3 { get; init; }
+    public decimal ShareRedemptionPrecedingMonth3 { get; init; }
 }
 
 /* ref: https://financialdata.net/documentation#mutual_fund_statistics

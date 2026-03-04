@@ -7,32 +7,32 @@ namespace Tudormobile.FinancialData.Entities;
 public record ForexPrice
 {
     /// <summary>
-    /// Gets or sets the trading symbol of the forex pair.
+    /// Gets the trading symbol of the forex pair.
     /// </summary>
     public string? TradingSymbol { get; init; }
 
     /// <summary>
-    /// Gets or sets the date of the price record.
+    /// Gets the date of the price record.
     /// </summary>
     public DateOnly Date { get; init; }
 
     /// <summary>
-    /// Gets or sets the opening rate.
+    /// Gets the opening rate.
     /// </summary>
     public decimal Open { get; init; }
 
     /// <summary>
-    /// Gets or sets the highest rate.
+    /// Gets the highest rate.
     /// </summary>
     public decimal High { get; init; }
 
     /// <summary>
-    /// Gets or sets the lowest rate.
+    /// Gets the lowest rate.
     /// </summary>
     public decimal Low { get; init; }
 
     /// <summary>
-    /// Gets or sets the closing rate.
+    /// Gets the closing rate.
     /// </summary>
     public decimal Close { get; init; }
 }

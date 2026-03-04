@@ -1,4 +1,4 @@
-﻿namespace Tudormobile.FinancialData.Entities;
+namespace Tudormobile.FinancialData.Entities;
 
 /// <summary>
 /// Represents daily stock price information for a specific trading symbol, including open, high, low, close prices, and
@@ -13,12 +13,12 @@ public record StockPrice
     private DateTimeOffset? _time;
 
     /// <summary>
-    /// Gets or sets the trading symbol associated with the financial instrument.
+    /// Gets the trading symbol associated with the financial instrument.
     /// </summary>
     public string? TradingSymbol { get; init; }
 
     /// <summary>
-    /// Gets or sets the date associated with the record.
+    /// Gets the date associated with the record.
     /// </summary>
     public DateOnly Date
     {
@@ -39,27 +39,27 @@ public record StockPrice
     }
 
     /// <summary>
-    /// Gets or sets the opening price of the asset for the trading period.
+    /// Gets the opening price of the asset for the trading period.
     /// </summary>
     public decimal Open { get; init; }
 
     /// <summary>
-    /// Gets or sets the highest price recorded during the relevant time period.
+    /// Gets the highest price recorded during the relevant time period.
     /// </summary>
     public decimal High { get; init; }
 
     /// <summary>
-    /// Gets or sets the lowest price recorded during the relevant time period.
+    /// Gets the lowest price recorded during the relevant time period.
     /// </summary>
     public decimal Low { get; init; }
 
     /// <summary>
-    /// Gets or sets the closing price of the asset for the trading period.
+    /// Gets the closing price of the asset for the trading period.
     /// </summary>
     public decimal Close { get; init; }
 
     /// <summary>
-    /// Gets or sets the total traded volume for the security.
+    /// Gets the total traded volume for the security.
     /// </summary>
     public decimal Volume { get; init; }
 

@@ -7,12 +7,12 @@ namespace Tudormobile.FinancialData.Entities;
 public record InstitutionalInvestor
 {
     /// <summary>
-    /// Gets or sets the central index key (CIK) of the institutional investor.
+    /// Gets the central index key (CIK) of the institutional investor.
     /// </summary>
     public string? InvestorCik { get; init; }
 
     /// <summary>
-    /// Gets or sets the name of the institutional investor.
+    /// Gets the name of the institutional investor.
     /// </summary>
     public string? InvestorName { get; init; }
 }

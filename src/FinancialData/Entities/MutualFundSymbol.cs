@@ -1,4 +1,4 @@
-﻿namespace Tudormobile.FinancialData.Entities;
+namespace Tudormobile.FinancialData.Entities;
 
 /// <summary>
 /// Represents a mutual fund symbol, including its trading symbol and name.
@@ -6,12 +6,12 @@
 public record MutualFundSymbol
 {
     /// <summary>
-    /// Gets or sets the trading symbol of the mutual fund.
+    /// Gets the trading symbol of the mutual fund.
     /// </summary>
     public string? TradingSymbol { get; init; }
 
     /// <summary>
-    /// Gets or sets the name of the mutual fund.
+    /// Gets the name of the mutual fund.
     /// </summary>
     public string? FundName { get; init; }
 }

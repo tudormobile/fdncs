@@ -7,37 +7,37 @@ namespace Tudormobile.FinancialData.Entities;
 public record OptionGreeks
 {
     /// <summary>
-    /// Gets or sets the option contract name.
+    /// Gets the option contract name.
     /// </summary>
     public string? ContractName { get; init; }
 
     /// <summary>
-    /// Gets or sets the date of the Greeks values.
+    /// Gets the date of the Greeks values.
     /// </summary>
     public DateOnly Date { get; init; }
 
     /// <summary>
-    /// Gets or sets the Delta value.
+    /// Gets the Delta value.
     /// </summary>
     public decimal Delta { get; init; }
 
     /// <summary>
-    /// Gets or sets the Gamma value.
+    /// Gets the Gamma value.
     /// </summary>
     public decimal Gamma { get; init; }
 
     /// <summary>
-    /// Gets or sets the Theta value.
+    /// Gets the Theta value.
     /// </summary>
     public decimal Theta { get; init; }
 
     /// <summary>
-    /// Gets or sets the Vega value.
+    /// Gets the Vega value.
     /// </summary>
     public decimal Vega { get; init; }
 
     /// <summary>
-    /// Gets or sets the Rho value.
+    /// Gets the Rho value.
     /// </summary>
     public decimal Rho { get; init; }
 }

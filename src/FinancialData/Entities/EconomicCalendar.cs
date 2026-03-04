@@ -7,32 +7,32 @@ namespace Tudormobile.FinancialData.Entities;
 public record EconomicCalendar
 {
     /// <summary>
-    /// Gets or sets the name of the economic event or indicator.
+    /// Gets the name of the economic event or indicator.
     /// </summary>
     public string? EventName { get; init; }
 
     /// <summary>
-    /// Gets or sets the country of the event.
+    /// Gets the country of the event.
     /// </summary>
     public string? Country { get; init; }
 
     /// <summary>
-    /// Gets or sets the country code.
+    /// Gets the country code.
     /// </summary>
     public string? CountryCode { get; init; }
 
     /// <summary>
-    /// Gets or sets the time of the event (EST).
+    /// Gets the time of the event (EST).
     /// </summary>
     public DateTime Time { get; init; }
 
     /// <summary>
-    /// Gets or sets the previous indicator value.
+    /// Gets the previous indicator value.
     /// </summary>
     public decimal PreviousValue { get; init; }
 
     /// <summary>
-    /// Gets or sets the actual indicator value.
+    /// Gets the actual indicator value.
     /// </summary>
     public decimal ActualValue { get; init; }
 }

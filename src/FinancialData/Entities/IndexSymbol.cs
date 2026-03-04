@@ -7,12 +7,12 @@ namespace Tudormobile.FinancialData.Entities;
 public record IndexSymbol
 {
     /// <summary>
-    /// Gets or sets the trading symbol of the market index.
+    /// Gets the trading symbol of the market index.
     /// </summary>
     public string? TradingSymbol { get; init; }
 
     /// <summary>
-    /// Gets or sets the name of the market index.
+    /// Gets the name of the market index.
     /// </summary>
     public string? IndexName { get; init; }
 }

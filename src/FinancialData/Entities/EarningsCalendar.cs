@@ -7,32 +7,32 @@ namespace Tudormobile.FinancialData.Entities;
 public record EarningsCalendar
 {
     /// <summary>
-    /// Gets or sets the trading symbol of the company.
+    /// Gets the trading symbol of the company.
     /// </summary>
     public string? TradingSymbol { get; init; }
 
     /// <summary>
-    /// Gets or sets the registrant name of the company.
+    /// Gets the registrant name of the company.
     /// </summary>
     public string? RegistrantName { get; init; }
 
     /// <summary>
-    /// Gets or sets the fiscal quarter end date.
+    /// Gets the fiscal quarter end date.
     /// </summary>
     public string? FiscalQuarterEndDate { get; init; }
 
     /// <summary>
-    /// Gets or sets the report date.
+    /// Gets the report date.
     /// </summary>
     public DateOnly ReportDate { get; init; }
 
     /// <summary>
-    /// Gets or sets the conference call time (EST).
+    /// Gets the conference call time (EST).
     /// </summary>
     public DateTime ConferenceCallTime { get; init; }
 
     /// <summary>
-    /// Gets or sets the forecasted earnings per share.
+    /// Gets the forecasted earnings per share.
     /// </summary>
     public decimal EarningsPerShareForecast { get; init; }
 }

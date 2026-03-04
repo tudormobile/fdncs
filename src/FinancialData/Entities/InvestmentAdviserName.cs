@@ -7,17 +7,17 @@ namespace Tudormobile.FinancialData.Entities;
 public record InvestmentAdviserName
 {
     /// <summary>
-    /// Gets or sets the CRD (Central Registration Depository) number.
+    /// Gets the CRD (Central Registration Depository) number.
     /// </summary>
     public string? CrdNumber { get; init; }
 
     /// <summary>
-    /// Gets or sets the SEC file number.
+    /// Gets the SEC file number.
     /// </summary>
     public string? SecFileNumber { get; init; }
 
     /// <summary>
-    /// Gets or sets the firm name of the investment adviser.
+    /// Gets the firm name of the investment adviser.
     /// </summary>
     public string? FirmName { get; init; }
 }

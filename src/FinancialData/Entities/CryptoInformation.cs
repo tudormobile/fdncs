@@ -7,32 +7,32 @@ namespace Tudormobile.FinancialData.Entities;
 public record CryptoInformation
 {
     /// <summary>
-    /// Gets or sets the trading symbol of the cryptocurrency.
+    /// Gets the trading symbol of the cryptocurrency.
     /// </summary>
     public string? TradingSymbol { get; init; }
 
     /// <summary>
-    /// Gets or sets the full name of the cryptocurrency.
+    /// Gets the full name of the cryptocurrency.
     /// </summary>
     public string? Name { get; init; }
 
     /// <summary>
-    /// Gets or sets the website URL.
+    /// Gets the website URL.
     /// </summary>
     public string? Website { get; init; }
 
     /// <summary>
-    /// Gets or sets the description of the cryptocurrency.
+    /// Gets the description of the cryptocurrency.
     /// </summary>
     public string? Description { get; init; }
 
     /// <summary>
-    /// Gets or sets the founding date.
+    /// Gets the founding date.
     /// </summary>
     public string? FoundingDate { get; init; }
 
     /// <summary>
-    /// Gets or sets the name of the founder(s).
+    /// Gets the name of the founder(s).
     /// </summary>
     public string? Founder { get; init; }
 }

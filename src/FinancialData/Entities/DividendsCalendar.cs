@@ -7,37 +7,37 @@ namespace Tudormobile.FinancialData.Entities;
 public record DividendsCalendar
 {
     /// <summary>
-    /// Gets or sets the trading symbol of the company.
+    /// Gets the trading symbol of the company.
     /// </summary>
     public string? TradingSymbol { get; init; }
 
     /// <summary>
-    /// Gets or sets the registrant name of the company.
+    /// Gets the registrant name of the company.
     /// </summary>
     public string? RegistrantName { get; init; }
 
     /// <summary>
-    /// Gets or sets the dividend amount per share.
+    /// Gets the dividend amount per share.
     /// </summary>
     public decimal Amount { get; init; }
 
     /// <summary>
-    /// Gets or sets the declaration date.
+    /// Gets the declaration date.
     /// </summary>
     public DateOnly DeclarationDate { get; init; }
 
     /// <summary>
-    /// Gets or sets the ex-dividend date.
+    /// Gets the ex-dividend date.
     /// </summary>
     public DateOnly ExDividendDate { get; init; }
 
     /// <summary>
-    /// Gets or sets the record date.
+    /// Gets the record date.
     /// </summary>
     public DateOnly RecordDate { get; init; }
 
     /// <summary>
-    /// Gets or sets the payment date.
+    /// Gets the payment date.
     /// </summary>
     public DateOnly PaymentDate { get; init; }
 }

@@ -7,37 +7,37 @@ namespace Tudormobile.FinancialData.Entities;
 public record IndexConstituent
 {
     /// <summary>
-    /// Gets or sets the trading symbol of the market index.
+    /// Gets the trading symbol of the market index.
     /// </summary>
     public string? TradingSymbol { get; init; }
 
     /// <summary>
-    /// Gets or sets the name of the market index.
+    /// Gets the name of the market index.
     /// </summary>
     public string? IndexName { get; init; }
 
     /// <summary>
-    /// Gets or sets the symbol of the constituent security.
+    /// Gets the symbol of the constituent security.
     /// </summary>
     public string? ConstituentSymbol { get; init; }
 
     /// <summary>
-    /// Gets or sets the name of the constituent security.
+    /// Gets the name of the constituent security.
     /// </summary>
     public string? ConstituentName { get; init; }
 
     /// <summary>
-    /// Gets or sets the sector of the constituent security.
+    /// Gets the sector of the constituent security.
     /// </summary>
     public string? Sector { get; init; }
 
     /// <summary>
-    /// Gets or sets the industry of the constituent security.
+    /// Gets the industry of the constituent security.
     /// </summary>
     public string? Industry { get; init; }
 
     /// <summary>
-    /// Gets or sets the date the constituent was added to the index.
+    /// Gets the date the constituent was added to the index.
     /// </summary>
     public DateOnly? DateAdded { get; init; }
 }

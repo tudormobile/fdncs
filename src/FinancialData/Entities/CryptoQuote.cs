@@ -7,32 +7,32 @@ namespace Tudormobile.FinancialData.Entities;
 public record CryptoQuote
 {
     /// <summary>
-    /// Gets or sets the trading symbol of the cryptocurrency.
+    /// Gets the trading symbol of the cryptocurrency.
     /// </summary>
     public string? TradingSymbol { get; init; }
 
     /// <summary>
-    /// Gets or sets the timestamp of the quote (UTC).
+    /// Gets the timestamp of the quote (UTC).
     /// </summary>
     public DateTime Time { get; init; }
 
     /// <summary>
-    /// Gets or sets the current price.
+    /// Gets the current price.
     /// </summary>
     public decimal Price { get; init; }
 
     /// <summary>
-    /// Gets or sets the 24-hour trading volume.
+    /// Gets the 24-hour trading volume.
     /// </summary>
     public decimal Volume { get; init; }
 
     /// <summary>
-    /// Gets or sets the market capitalization.
+    /// Gets the market capitalization.
     /// </summary>
     public decimal MarketCap { get; init; }
 
     /// <summary>
-    /// Gets or sets the 24-hour price change percentage.
+    /// Gets the 24-hour price change percentage.
     /// </summary>
     public decimal PercentChange { get; init; }
 }

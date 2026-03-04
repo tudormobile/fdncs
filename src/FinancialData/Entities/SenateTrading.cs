@@ -7,42 +7,42 @@ namespace Tudormobile.FinancialData.Entities;
 public record SenateTrading
 {
     /// <summary>
-    /// Gets or sets the trading symbol of the company.
+    /// Gets the trading symbol of the company.
     /// </summary>
     public string? TradingSymbol { get; init; }
 
     /// <summary>
-    /// Gets or sets the name of the Senator.
+    /// Gets the name of the Senator.
     /// </summary>
     public string? SenatorName { get; init; }
 
     /// <summary>
-    /// Gets or sets the date of the transaction.
+    /// Gets the date of the transaction.
     /// </summary>
     public DateOnly TransactionDate { get; init; }
 
     /// <summary>
-    /// Gets or sets the disclosure date.
+    /// Gets the disclosure date.
     /// </summary>
     public DateOnly DisclosureDate { get; init; }
 
     /// <summary>
-    /// Gets or sets the transaction type (e.g., Purchase, Sale).
+    /// Gets the transaction type (e.g., Purchase, Sale).
     /// </summary>
     public string? TransactionType { get; init; }
 
     /// <summary>
-    /// Gets or sets the asset type (e.g., Stock, Stock Option).
+    /// Gets the asset type (e.g., Stock, Stock Option).
     /// </summary>
     public string? AssetType { get; init; }
 
     /// <summary>
-    /// Gets or sets the amount range of the transaction.
+    /// Gets the amount range of the transaction.
     /// </summary>
     public string? AmountRange { get; init; }
 
     /// <summary>
-    /// Gets or sets additional comments.
+    /// Gets additional comments.
     /// </summary>
     public string? Comment { get; init; }
 }

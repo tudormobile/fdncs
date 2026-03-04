@@ -7,12 +7,12 @@ namespace Tudormobile.FinancialData.Entities;
 public record CryptoSymbol
 {
     /// <summary>
-    /// Gets or sets the trading symbol of the cryptocurrency.
+    /// Gets the trading symbol of the cryptocurrency.
     /// </summary>
     public string? TradingSymbol { get; init; }
 
     /// <summary>
-    /// Gets or sets the full name of the cryptocurrency.
+    /// Gets the full name of the cryptocurrency.
     /// </summary>
     public string? Name { get; init; }
 }

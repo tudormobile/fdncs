@@ -7,62 +7,62 @@ namespace Tudormobile.FinancialData.Entities;
 public record InstitutionalPortfolioStatistics
 {
     /// <summary>
-    /// Gets or sets the central index key (CIK) of the institutional investor.
+    /// Gets the central index key (CIK) of the institutional investor.
     /// </summary>
     public string? InvestorCik { get; init; }
 
     /// <summary>
-    /// Gets or sets the name of the institutional investor.
+    /// Gets the name of the institutional investor.
     /// </summary>
     public string? InvestorName { get; init; }
 
     /// <summary>
-    /// Gets or sets the reporting period end date.
+    /// Gets the reporting period end date.
     /// </summary>
     public DateOnly PeriodEndDate { get; init; }
 
     /// <summary>
-    /// Gets or sets the filing date with the SEC.
+    /// Gets the filing date with the SEC.
     /// </summary>
     public DateOnly FilingDate { get; init; }
 
     /// <summary>
-    /// Gets or sets the total portfolio value.
+    /// Gets the total portfolio value.
     /// </summary>
     public decimal TotalValue { get; init; }
 
     /// <summary>
-    /// Gets or sets the number of holdings in the portfolio.
+    /// Gets the number of holdings in the portfolio.
     /// </summary>
     public int NumberOfHoldings { get; init; }
 
     /// <summary>
-    /// Gets or sets the number of new positions.
+    /// Gets the number of new positions.
     /// </summary>
     public int NewPositions { get; init; }
 
     /// <summary>
-    /// Gets or sets the number of sold out positions.
+    /// Gets the number of sold out positions.
     /// </summary>
     public int SoldOutPositions { get; init; }
 
     /// <summary>
-    /// Gets or sets the number of increased positions.
+    /// Gets the number of increased positions.
     /// </summary>
     public int IncreasedPositions { get; init; }
 
     /// <summary>
-    /// Gets or sets the number of decreased positions.
+    /// Gets the number of decreased positions.
     /// </summary>
     public int DecreasedPositions { get; init; }
 
     /// <summary>
-    /// Gets or sets the total value change from the previous period.
+    /// Gets the total value change from the previous period.
     /// </summary>
     public decimal TotalValueChange { get; init; }
 
     /// <summary>
-    /// Gets or sets the percentage change in total value.
+    /// Gets the percentage change in total value.
     /// </summary>
     public decimal TotalValueChangePercent { get; init; }
 }
