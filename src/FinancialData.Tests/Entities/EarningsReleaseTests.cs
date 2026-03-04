@@ -15,12 +15,11 @@ namespace FinancialData.Tests.Entities
     ""trading_symbol"": ""NVDA"",
     ""central_index_key"": ""0001045810"",
     ""registrant_name"": ""NVIDIA CORP"",
-    ""fiscal_year"": ""2024"",
-    ""fiscal_quarter"": ""Q4"",
-    ""period_end_date"": ""2024-01-28"",
-    ""earnings_date"": ""2024-02-21"",
-    ""eps_actual"": 5.16,
-    ""eps_forecast"": 4.64,
+    ""market_cap"": 1500000000000.0,
+    ""fiscal_quarter_end_date"": ""2024-01-28"",
+    ""earnings_per_share"": 5.16,
+    ""earnings_per_share_forecast"": 4.64,
+    ""percentage_surprise"": 11.2,
     ""number_of_forecasts"": 35,
     ""conference_call_time"": ""2024-02-21 17:00:00""
 }";

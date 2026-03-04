@@ -56,7 +56,7 @@ namespace FinancialData.Tests.Entities
             Assert.AreEqual(57228000000.0m, balanceSheet.MarketableSecuritiesCurrent);
             Assert.AreEqual(56924000000.0m, balanceSheet.AccountsReceivable);
             Assert.AreEqual(1246000000.0m, balanceSheet.Inventories);
-            Assert.IsNull(balanceSheet.NonTradeReceivables);
+            Assert.AreEqual(0m, balanceSheet.NonTradeReceivables); // Null converts to 0 with DecimalNullToZeroConverter
             Assert.AreEqual(26021000000.0m, balanceSheet.OtherAssetsCurrent);
             Assert.AreEqual(159734000000.0m, balanceSheet.TotalAssetsCurrent);
             Assert.AreEqual(14600000000.0m, balanceSheet.MarketableSecuritiesNonCurrent);

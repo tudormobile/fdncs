@@ -15,8 +15,13 @@ namespace FinancialData.Tests.Entities
     ""trading_symbol"": ""MSFT"",
     ""central_index_key"": ""0000789019"",
     ""registrant_name"": ""MICROSOFT CORP"",
-    ""date"": ""2024-01-15"",
-    ""market_cap"": 3100000000000.0
+    ""fiscal_year"": ""2024"",
+    ""market_cap_value"": 3100000000000.0,
+    ""change_in_market_cap"": 50000000000.0,
+    ""percentage_change_in_market_cap"": 1.64,
+    ""shares_outstanding"": 7430000000.0,
+    ""change_in_shares_outstanding"": 0.0,
+    ""percentage_change_in_shares_outstanding"": 0.0
 }";
             using var doc = JsonDocument.Parse(json);
             var marketCap = FinancialDataSerializer.Instance.Deserialize<MarketCap>(doc);

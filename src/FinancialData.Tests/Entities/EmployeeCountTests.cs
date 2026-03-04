@@ -16,7 +16,7 @@ namespace FinancialData.Tests.Entities
     ""central_index_key"": ""0001652044"",
     ""registrant_name"": ""Alphabet Inc."",
     ""fiscal_year"": ""2023"",
-    ""number_of_employees"": 182502
+    ""count"": 182502
 }";
             using var doc = JsonDocument.Parse(json);
             var employeeCount = FinancialDataSerializer.Instance.Deserialize<EmployeeCount>(doc);

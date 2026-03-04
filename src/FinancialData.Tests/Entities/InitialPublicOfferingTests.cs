@@ -13,14 +13,12 @@ namespace FinancialData.Tests.Entities
         {
             var json = @"{
     ""trading_symbol"": ""ABNB"",
-    ""central_index_key"": ""0001559720"",
     ""registrant_name"": ""Airbnb, Inc."",
-    ""ipo_date"": ""2020-12-10"",
-    ""offer_price"": 68.00,
+    ""exchange"": ""NASDAQ"",
+    ""pricing_date"": ""2020-12-10"",
+    ""share_price"": 68.00,
     ""shares_offered"": 51900000,
-    ""amount_raised"": 3500000000.0,
-    ""first_day_opening_price"": 146.00,
-    ""first_day_closing_price"": 144.71
+    ""offering_value"": 3500000000.0
 }";
             using var doc = JsonDocument.Parse(json);
             var ipo = FinancialDataSerializer.Instance.Deserialize<InitialPublicOffering>(doc);

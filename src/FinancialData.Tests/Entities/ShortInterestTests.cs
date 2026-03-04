@@ -13,13 +13,16 @@ namespace FinancialData.Tests.Entities
         {
             var json = @"{
     ""trading_symbol"": ""GME"",
-    ""central_index_key"": ""0001326380"",
-    ""registrant_name"": ""GAMESTOP CORP"",
+    ""title_of_security"": ""GAMESTOP CORP"",
+    ""market_code"": ""NYSE"",
     ""settlement_date"": ""2024-01-15"",
-    ""short_interest"": 45000000,
+    ""shorted_securities"": 45000000,
+    ""previous_shorted_securities"": 50000000,
+    ""change_in_shorted_securities"": -5000000,
+    ""percentage_change_in_shorted_securities"": -10.0,
     ""average_daily_volume"": 8500000,
     ""days_to_cover"": 5.29,
-    ""percent_of_float"": 15.5
+    ""is_stock_split"": false
 }";
             using var doc = JsonDocument.Parse(json);
             var shortInterest = FinancialDataSerializer.Instance.Deserialize<ShortInterest>(doc);

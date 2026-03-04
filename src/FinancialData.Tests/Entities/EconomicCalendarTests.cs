@@ -12,13 +12,12 @@ namespace FinancialData.Tests.Entities
         public void EconomicCalendar_Deserialize_FromJson_Works()
         {
             var json = @"{
-    ""event_date"": ""2024-02-15"",
-    ""event_time"": ""08:30:00"",
-    ""country"": ""United States"",
     ""event_name"": ""CPI Release"",
-    ""actual"": 3.1,
-    ""forecast"": 2.9,
-    ""previous"": 3.4
+    ""country"": ""United States"",
+    ""country_code"": ""US"",
+    ""time"": ""2024-02-15 08:30:00"",
+    ""previous_value"": 3.4,
+    ""actual_value"": 3.1
 }";
             using var doc = JsonDocument.Parse(json);
             var calendar = FinancialDataSerializer.Instance.Deserialize<EconomicCalendar>(doc);
