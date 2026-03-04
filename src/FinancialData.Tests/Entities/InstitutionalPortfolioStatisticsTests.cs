@@ -29,9 +29,16 @@ namespace FinancialData.Tests.Entities
             var stats = FinancialDataSerializer.Instance.Deserialize<InstitutionalPortfolioStatistics>(doc);
             Assert.AreEqual("0001067983", stats.InvestorCik);
             Assert.AreEqual("BERKSHIRE HATHAWAY INC", stats.InvestorName);
+            Assert.AreEqual(new DateOnly(2024, 3, 31), stats.PeriodEndDate);
+            Assert.AreEqual(new DateOnly(2024, 5, 15), stats.FilingDate);
             Assert.AreEqual(360000000000m, stats.TotalValue);
             Assert.AreEqual(45, stats.NumberOfHoldings);
             Assert.AreEqual(3, stats.NewPositions);
+            Assert.AreEqual(2, stats.SoldOutPositions);
+            Assert.AreEqual(15, stats.IncreasedPositions);
+            Assert.AreEqual(8, stats.DecreasedPositions);
+            Assert.AreEqual(5000000000m, stats.TotalValueChange);
+            Assert.AreEqual(1.41m, stats.TotalValueChangePercent);
         }
     }
 }

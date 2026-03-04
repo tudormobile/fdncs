@@ -19,7 +19,9 @@ namespace FinancialData.Tests.Entities
 }";
             using var doc = JsonDocument.Parse(json);
             var fedPressRelease = FinancialDataSerializer.Instance.Deserialize<FedPressRelease>(doc);
+            Assert.AreEqual(new DateTime(2024, 1, 31, 14, 0, 0), fedPressRelease.DateTime);
             Assert.AreEqual("Federal Reserve maintains target range for federal funds rate", fedPressRelease.Headline);
+            Assert.AreEqual("The Federal Open Market Committee decided today...", fedPressRelease.Text);
             Assert.AreEqual("https://www.federalreserve.gov/newsevents/pressreleases/", fedPressRelease.Url);
         }
     }

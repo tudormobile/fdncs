@@ -27,9 +27,9 @@ public record ExecutiveCompensation
     public string? ExecutiveName { get; init; }
 
     /// <summary>
-    /// Gets or sets the position of the executive.
+    /// Gets or sets the position or title of the executive.
     /// </summary>
-    public string? ExecutivePosition { get; init; }
+    public string? ExecutiveTitle { get; init; }
 
     /// <summary>
     /// Gets or sets the fiscal year.
@@ -52,17 +52,40 @@ public record ExecutiveCompensation
     public decimal StockAwards { get; init; }
 
     /// <summary>
-    /// Gets or sets the incentive plan compensation.
+    /// Gets or sets the value of option awards.
     /// </summary>
-    public decimal IncentivePlanCompensation { get; init; }
+    public decimal OptionAwards { get; init; }
 
     /// <summary>
-    /// Gets or sets other compensation.
+    /// Gets or sets the non-equity incentive plan compensation.
     /// </summary>
-    public decimal OtherCompensation { get; init; }
+    public decimal NonEquityIncentivePlanCompensation { get; init; }
+
+    /// <summary>
+    /// Gets or sets all other compensation.
+    /// </summary>
+    public decimal AllOtherCompensation { get; init; }
 
     /// <summary>
     /// Gets or sets the total compensation.
     /// </summary>
     public decimal TotalCompensation { get; init; }
 }
+/* ref: https://financialdata.net/documentation#executive_compensation
+{
+    "trading_symbol": "AAPL",
+    "central_index_key": "0000320193",
+    "registrant_name": "Apple Inc.",
+    "fiscal_year": "2023",
+    "executive_name": "Tim Cook",
+    "executive_title": "CEO",
+    "salary": 3000000.0,
+    "bonus": 12000000.0,
+    "stock_awards": 82000000.0,
+    "option_awards": 0.0,
+    "non_equity_incentive_plan_compensation": 10000000.0,
+    "all_other_compensation": 1500000.0,
+    "total_compensation": 108500000.0
+}
+*/
+

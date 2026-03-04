@@ -36,6 +36,17 @@ namespace FinancialData.Tests.Entities
             Assert.AreEqual("AAPL", companyInfo.TradingSymbol);
             Assert.AreEqual("0000320193", companyInfo.CentralIndexKey);
             Assert.AreEqual("Apple Inc.", companyInfo.RegistrantName);
+            Assert.AreEqual("US0378331005", companyInfo.IsinNumber);
+            Assert.AreEqual("HWUPKR0MPOU8FGXBT394", companyInfo.LeiNumber);
+            Assert.AreEqual("942404110", companyInfo.EinNumber);
+            Assert.AreEqual("NASDAQ", companyInfo.Exchange);
+            Assert.AreEqual("3571", companyInfo.SicCode);
+            Assert.AreEqual("Electronic Computers", companyInfo.SicDescription);
+            Assert.AreEqual("0930", companyInfo.FiscalYearEnd);
+            Assert.AreEqual("CA", companyInfo.StateOfIncorporation);
+            Assert.AreEqual("(408) 996-1010", companyInfo.PhoneNumber);
+            Assert.AreEqual("Technology", companyInfo.Industry);
+            Assert.AreEqual("https://www.apple.com", companyInfo.Website);
             Assert.AreEqual(2800000000000m, companyInfo.MarketCap);
             Assert.AreEqual(0m, companyInfo.SharesIssued);
             Assert.AreEqual(15550000000m, companyInfo.SharesOutstanding);

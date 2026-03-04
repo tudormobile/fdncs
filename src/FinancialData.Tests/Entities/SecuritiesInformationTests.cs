@@ -22,6 +22,10 @@ namespace FinancialData.Tests.Entities
             using var doc = JsonDocument.Parse(json);
             var securities = FinancialDataSerializer.Instance.Deserialize<SecuritiesInformation>(doc);
             Assert.AreEqual("IBM", securities.TradingSymbol);
+            Assert.AreEqual("INTERNATIONAL BUSINESS MACHINES CORP", securities.IssuerName);
+            Assert.AreEqual("459200101", securities.CusipNumber);
+            Assert.AreEqual("US4592001014", securities.IsinNumber);
+            Assert.AreEqual("BBG000BLNNH6", securities.FigiIdentifier);
             Assert.AreEqual("Common Stock", securities.SecurityType);
         }
     }

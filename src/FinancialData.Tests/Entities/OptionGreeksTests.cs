@@ -23,10 +23,12 @@ namespace FinancialData.Tests.Entities
             using var doc = JsonDocument.Parse(json);
             var greeks = FinancialDataSerializer.Instance.Deserialize<OptionGreeks>(doc);
             Assert.AreEqual("AAPL240119C00180000", greeks.ContractName);
+            Assert.AreEqual(new DateOnly(2024, 1, 15), greeks.Date);
             Assert.AreEqual(0.65m, greeks.Delta);
             Assert.AreEqual(0.025m, greeks.Gamma);
             Assert.AreEqual(-0.08m, greeks.Theta);
             Assert.AreEqual(0.15m, greeks.Vega);
+            Assert.AreEqual(0.05m, greeks.Rho);
         }
     }
 }

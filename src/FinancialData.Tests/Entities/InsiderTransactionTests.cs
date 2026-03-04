@@ -30,11 +30,19 @@ namespace FinancialData.Tests.Entities
             using var doc = JsonDocument.Parse(json);
             var insider = FinancialDataSerializer.Instance.Deserialize<InsiderTransaction>(doc);
             Assert.AreEqual("AAPL", insider.TradingSymbol);
+            Assert.AreEqual("0000320193", insider.CentralIndexKey);
+            Assert.AreEqual("Apple Inc.", insider.RegistrantName);
             Assert.AreEqual("Tim Cook", insider.InsiderName);
+            Assert.AreEqual("CEO", insider.InsiderTitle);
+            Assert.AreEqual(new DateOnly(2024, 1, 10), insider.TransactionDate);
+            Assert.AreEqual(new DateOnly(2024, 1, 12), insider.FilingDate);
             Assert.AreEqual("Sale", insider.TransactionType);
+            Assert.AreEqual("S", insider.TransactionCode);
             Assert.AreEqual(50000m, insider.Shares);
             Assert.AreEqual(185.50m, insider.Price);
             Assert.AreEqual(9275000m, insider.Value);
+            Assert.AreEqual(3200000m, insider.SharesOwnedAfterTransaction);
+            Assert.AreEqual("https://sec.gov/filing/12345", insider.SecFilingUrl);
         }
     }
 }

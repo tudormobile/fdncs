@@ -25,7 +25,12 @@ namespace FinancialData.Tests.Entities
             var senateTrading = FinancialDataSerializer.Instance.Deserialize<SenateTrading>(doc);
             Assert.AreEqual("NVDA", senateTrading.TradingSymbol);
             Assert.AreEqual("John Doe", senateTrading.SenatorName);
+            Assert.AreEqual(new DateOnly(2024, 1, 10), senateTrading.TransactionDate);
+            Assert.AreEqual(new DateOnly(2024, 1, 25), senateTrading.DisclosureDate);
             Assert.AreEqual("Purchase", senateTrading.TransactionType);
+            Assert.AreEqual("Stock", senateTrading.AssetType);
+            Assert.AreEqual("$15,001 - $50,000", senateTrading.AmountRange);
+            Assert.AreEqual("", senateTrading.Comment);
         }
     }
 }

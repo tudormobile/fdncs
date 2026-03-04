@@ -53,6 +53,6 @@ public class FinancialDataResponse<T>
     /// <returns>A task containing a <see cref="FinancialDataResponse{T}"/> object with an error message stating that the premium
     /// subscription API is not implemented.</returns>
     public static Task<FinancialDataResponse<T>> StandardSubscriptionNotImplemented()
-        => Task.FromResult(new FinancialDataResponse<T>(error: "Premium subscription api not implemented."));
+        => Task.FromResult(new FinancialDataResponse<T>(error: "Standard subscription api not implemented."));
 
 }

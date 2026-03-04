@@ -116,10 +116,8 @@ namespace FinancialData.Tests.Entities
             using var doc = JsonDocument.Parse(json);
             var stockPrice = FinancialDataSerializer.Instance.Deserialize<StockPrice>(doc);
 
-            // When both are set, the order in JSON determines which is set last
-            // In this case, "date" comes before "time" in the JSON, so "time" would be set last
-            // However, the actual behavior depends on which field is deserialized last
-            // Let's just verify both are accessible and one of them is properly set
+            // In the API definition, both "date" and "time" will never be set, therefore we
+            // just verify both are accessible and one of them is properly set
             Assert.IsTrue(stockPrice.Date != default || stockPrice.Time != default);
         }
 

@@ -6,7 +6,6 @@ namespace Tudormobile.FinancialData.Entities;
 /// </summary>
 public record EtfHoldings
 {
-    // TODO: Define properties based on API response or JSON sample
     /// <summary>
     /// Gets or sets the unique central index key for the ETF.
     /// </summary>

@@ -13,13 +13,14 @@ namespace FinancialData.Tests.Entities
         {
             var json = @"{
     ""trading_symbol"": ""AAPL"",
-    ""central_index_key"": ""0000320193"",
     ""registrant_name"": ""Apple Inc."",
-    ""earnings_date"": ""2024-02-01""
+    ""report_date"": ""2024-02-01""
 }";
             using var doc = JsonDocument.Parse(json);
             var calendar = FinancialDataSerializer.Instance.Deserialize<EarningsCalendar>(doc);
             Assert.AreEqual("AAPL", calendar.TradingSymbol);
+            Assert.AreEqual("Apple Inc.", calendar.RegistrantName);
+            Assert.AreEqual(new DateOnly(2024, 2, 1), calendar.ReportDate);
         }
     }
 }

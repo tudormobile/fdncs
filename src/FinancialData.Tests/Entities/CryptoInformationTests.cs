@@ -24,6 +24,8 @@ namespace FinancialData.Tests.Entities
             Assert.AreEqual("BTC-USD", cryptoInfo.TradingSymbol);
             Assert.AreEqual("Bitcoin", cryptoInfo.Name);
             Assert.AreEqual("https://bitcoin.org", cryptoInfo.Website);
+            Assert.AreEqual("Bitcoin is a decentralized digital currency.", cryptoInfo.Description);
+            Assert.AreEqual("2009-01-03", cryptoInfo.FoundingDate);
             Assert.AreEqual("Satoshi Nakamoto", cryptoInfo.Founder);
         }
     }

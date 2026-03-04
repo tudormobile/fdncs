@@ -6,7 +6,6 @@ namespace Tudormobile.FinancialData.Entities;
 /// </summary>
 public record EtfQuotes
 {
-    // TODO: Define properties based on API response or JSON sample
     /// <summary>
     /// Gets or sets the trading symbol of the ETF.
     /// </summary>

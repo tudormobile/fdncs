@@ -24,7 +24,11 @@ namespace FinancialData.Tests.Entities
             var pressRelease = FinancialDataSerializer.Instance.Deserialize<PressRelease>(doc);
             Assert.AreEqual("TSLA", pressRelease.TradingSymbol);
             Assert.AreEqual("0001318605", pressRelease.CentralIndexKey);
+            Assert.AreEqual("Tesla, Inc.", pressRelease.RegistrantName);
+            Assert.AreEqual(new DateTime(2024, 1, 24, 16, 30, 0), pressRelease.DateTime);
             Assert.AreEqual("Tesla Reports Q4 2023 Results", pressRelease.Headline);
+            Assert.AreEqual("Tesla announced fourth quarter results...", pressRelease.Text);
+            Assert.AreEqual("https://ir.tesla.com/press-release/", pressRelease.Url);
         }
     }
 }

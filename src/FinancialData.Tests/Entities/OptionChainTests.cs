@@ -23,7 +23,10 @@ namespace FinancialData.Tests.Entities
             using var doc = JsonDocument.Parse(json);
             var optionChain = FinancialDataSerializer.Instance.Deserialize<OptionChain>(doc);
             Assert.AreEqual("AAPL", optionChain.TradingSymbol);
+            Assert.AreEqual("0000320193", optionChain.CentralIndexKey);
+            Assert.AreEqual("Apple Inc.", optionChain.RegistrantName);
             Assert.AreEqual("AAPL240119C00180000", optionChain.ContractName);
+            Assert.AreEqual(new DateOnly(2024, 1, 19), optionChain.ExpirationDate);
             Assert.AreEqual("Call", optionChain.PutOrCall);
             Assert.AreEqual(180.00m, optionChain.StrikePrice);
         }

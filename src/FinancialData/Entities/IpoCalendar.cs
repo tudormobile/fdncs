@@ -24,7 +24,7 @@ public record IpoCalendar
     /// <summary>
     /// Gets or sets the pricing date of the IPO.
     /// </summary>
-    public DateOnly PricingDate { get; init; }
+    public DateOnly IpoDate { get; init; }
 
     /// <summary>
     /// Gets or sets the share price.

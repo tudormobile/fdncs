@@ -29,7 +29,7 @@ public record DividendsCalendar
     /// <summary>
     /// Gets or sets the ex-dividend date.
     /// </summary>
-    public DateOnly ExDate { get; init; }
+    public DateOnly ExDividendDate { get; init; }
 
     /// <summary>
     /// Gets or sets the record date.

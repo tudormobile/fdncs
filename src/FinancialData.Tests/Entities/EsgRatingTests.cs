@@ -24,9 +24,13 @@ namespace FinancialData.Tests.Entities
             using var doc = JsonDocument.Parse(json);
             var esgRating = FinancialDataSerializer.Instance.Deserialize<EsgRating>(doc);
             Assert.AreEqual("MSFT", esgRating.TradingSymbol);
+            Assert.AreEqual("0000789019", esgRating.CentralIndexKey);
+            Assert.AreEqual("MICROSOFT CORP", esgRating.RegistrantName);
+            Assert.AreEqual(new DateOnly(2024, 1, 15), esgRating.Date);
             Assert.AreEqual("AAA", esgRating.Rating);
             Assert.AreEqual("AA", esgRating.EnvironmentalRating);
             Assert.AreEqual("AAA", esgRating.SocialRating);
+            Assert.AreEqual("AA", esgRating.GovernanceRating);
         }
     }
 }

@@ -27,7 +27,11 @@ public record StockSplit
     public DateOnly ExecutionDate { get; init; }
 
     /// <summary>
-    /// Gets or sets the split multiplier (e.g., 2.0 for 2-for-1 split).
+    /// Gets the ratio that represents how a stock has been split, typically expressed as a string (for example, "2:1").
     /// </summary>
-    public decimal Multiplier { get; init; }
+    /// <remarks>The split ratio indicates the proportion by which shares are divided during a stock split.
+    /// The value should follow the expected format (such as "2:1" or "3:2") to ensure correct interpretation.
+    /// </remarks>
+    public string? SplitRatio { get; init; }
+
 }

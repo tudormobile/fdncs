@@ -28,7 +28,12 @@ namespace FinancialData.Tests.Entities
             using var doc = JsonDocument.Parse(json);
             var holding = FinancialDataSerializer.Instance.Deserialize<InstitutionalHolding>(doc);
             Assert.AreEqual("AAPL", holding.TradingSymbol);
+            Assert.AreEqual("0000320193", holding.CentralIndexKey);
+            Assert.AreEqual("Apple Inc.", holding.RegistrantName);
+            Assert.AreEqual("0001067983", holding.InvestorCik);
             Assert.AreEqual("Berkshire Hathaway", holding.InvestorName);
+            Assert.AreEqual(new DateOnly(2024, 3, 31), holding.PeriodEndDate);
+            Assert.AreEqual(new DateOnly(2024, 5, 15), holding.FilingDate);
             Assert.AreEqual(915000000m, holding.Shares);
             Assert.AreEqual(153000000000m, holding.Value);
             Assert.AreEqual(42.5m, holding.PortfolioPercent);

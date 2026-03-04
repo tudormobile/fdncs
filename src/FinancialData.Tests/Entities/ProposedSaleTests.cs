@@ -23,8 +23,12 @@ namespace FinancialData.Tests.Entities
             using var doc = JsonDocument.Parse(json);
             var proposedSale = FinancialDataSerializer.Instance.Deserialize<ProposedSale>(doc);
             Assert.AreEqual("AMZN", proposedSale.TradingSymbol);
+            Assert.AreEqual("0001018724", proposedSale.CentralIndexKey);
+            Assert.AreEqual("AMAZON COM INC", proposedSale.RegistrantName);
             Assert.AreEqual("Jeffrey P. Bezos", proposedSale.InsiderName);
+            Assert.AreEqual(new DateOnly(2024, 2, 2), proposedSale.FilingDate);
             Assert.AreEqual(50000000m, proposedSale.Shares);
+            Assert.AreEqual("https://www.sec.gov/cgi-bin/browse-edgar", proposedSale.SecFilingUrl);
         }
     }
 }

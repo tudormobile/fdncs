@@ -19,7 +19,9 @@ namespace FinancialData.Tests.Entities
 }";
             using var doc = JsonDocument.Parse(json);
             var secPressRelease = FinancialDataSerializer.Instance.Deserialize<SecPressRelease>(doc);
+            Assert.AreEqual(new DateTime(2024, 1, 15, 12, 0, 0), secPressRelease.DateTime);
             Assert.AreEqual("SEC Charges Company with Accounting Fraud", secPressRelease.Headline);
+            Assert.AreEqual("The Securities and Exchange Commission today announced...", secPressRelease.Text);
             Assert.AreEqual("https://www.sec.gov/news/press-release/", secPressRelease.Url);
         }
     }
