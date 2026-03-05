@@ -8,9 +8,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Planned
-- Add additional Financial Data Network endpoints
+- Improved unit tests
+- Integration tests
+- Standard and Premium default implementations
 
-## [0.0.1] - 2026-03-11
+## [0.1.0] - 2026-03-05
+### Added
+- Improved documentation
+- Additional endpoints for free tier
+- Complete entity data model
+- Endpoint stubs for completing the api surface area
+
+## [0.0.1] - 2026-03-1
 ### Added
 - Initial skeleton an minimal implementation
 
