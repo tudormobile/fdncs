@@ -129,7 +129,6 @@ Console.WriteLine($"ETF symbols: {etfSymbols.Data?.Count}");
 ### 🔧 Advanced Usage Patterns
 
 #### Using the Builder Pattern:
-#### Using the Builder Pattern:
 ```cs
 using Tudormobile.FinancialData;
 using Tudormobile.FinancialData.Extensions;
