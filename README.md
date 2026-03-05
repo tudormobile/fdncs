@@ -44,7 +44,7 @@ var client = FinancialDataApi.CreateClientBuilder()
                 .Build();
 
 // Get Stock Prices for Microsoft (MSFT)
-var stockPrices = client.GetStockPricesAsync(identifier: "MSFT").Result;
+var stockPrices = await client.GetStockPricesAsync(identifier: "MSFT");
 Console.WriteLine(stockPrices.Data?[0]);
 ```
 #### Using dependency injection:
@@ -68,7 +68,7 @@ using IHost host = builder.Build();
 
 var client = host.Services.GetRequiredService<IFinancialDataClient>();
 // Get Stock Prices for Microsoft (MSFT)
-var stockPrices = client.GetStockPricesAsync(identifier: "MSFT").Result;
+var stockPrices = await client.GetStockPricesAsync(identifier: "MSFT");
 Console.WriteLine(stockPrices.Data?[0]);
 ```
 > [!TIP]
