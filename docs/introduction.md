@@ -168,7 +168,6 @@ var client = host.Services.GetRequiredService<IFinancialDataClient>();
 ## Sample Applications
 
 Interactive code examples are provided in the `src/samples/` directory: 
-Interactive code examples are provided in the `src/samples/` directory:
 
 - **SimpleConsoleApp**
     - A minimal console application using the basic `IFinancialDataClient` interface
