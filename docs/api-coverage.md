@@ -156,4 +156,4 @@ This document provides a comprehensive overview of the FinancialData.Net API end
 - **Issues**: Report bugs or request features on [GitHub](https://github.com/tudormobile/fdncs/issues)
 
 > [!TIP]
-> Methods marked as 🚧 will return `NotImplemented()` responses. Check their return values before processing data.
+> Methods marked as 🚧 currently return a failure response (for example, `IsSuccess = false`) with an error message indicating that the endpoint is not implemented yet. Always check the response status and error details before processing data.
