@@ -39,6 +39,7 @@ jobs:
         dotnet tool update -g dotnet-Coverage
         dotnet tool update -g dotnet-reportgenerator-globaltool
     - run: |
+        cd src
         dotnet test --coverage --report-trx --report-trx-filename "output.trx"
         dotnet build -c Release
         dotnet-coverage merge **\*.coverage --remove-input-files --output-format xml --output output.xml
