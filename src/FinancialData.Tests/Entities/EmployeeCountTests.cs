@@ -21,6 +21,8 @@ namespace FinancialData.Tests.Entities
             using var doc = JsonDocument.Parse(json);
             var employeeCount = FinancialDataSerializer.Instance.Deserialize<EmployeeCount>(doc);
             Assert.AreEqual("GOOGL", employeeCount.TradingSymbol);
+            Assert.AreEqual("0001652044", employeeCount.CentralIndexKey);
+            Assert.AreEqual("Alphabet Inc.", employeeCount.RegistrantName);
             Assert.AreEqual("2023", employeeCount.FiscalYear);
             Assert.AreEqual(182502, employeeCount.Count);
         }

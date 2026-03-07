@@ -26,3 +26,11 @@ public record SplitsCalendar
     /// </summary>
     public decimal Multiplier { get; init; }
 }
+/* ref:
+{
+    "trading_symbol": "LINK",
+    "registrant_name": "INTERLINK ELECTRONICS INC",
+    "execution_date": "2025-10-29",
+    "multiplier": 1.5
+  }
+*/

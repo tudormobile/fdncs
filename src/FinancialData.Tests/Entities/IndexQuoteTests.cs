@@ -23,6 +23,7 @@ namespace FinancialData.Tests.Entities
             var indexQuote = FinancialDataSerializer.Instance.Deserialize<IndexQuote>(doc);
             Assert.AreEqual("^GSPC", indexQuote.TradingSymbol);
             Assert.AreEqual("S&P 500", indexQuote.IndexName);
+            Assert.AreEqual(new DateTime(2025, 9, 23, 15, 19, 59), indexQuote.Time);
             Assert.AreEqual(6656.92m, indexQuote.Price);
             Assert.AreEqual(-36.83m, indexQuote.Change);
             Assert.AreEqual(-0.55m, indexQuote.PercentageChange);

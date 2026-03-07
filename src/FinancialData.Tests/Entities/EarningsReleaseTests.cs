@@ -26,9 +26,15 @@ namespace FinancialData.Tests.Entities
             using var doc = JsonDocument.Parse(json);
             var earnings = FinancialDataSerializer.Instance.Deserialize<EarningsRelease>(doc);
             Assert.AreEqual("NVDA", earnings.TradingSymbol);
+            Assert.AreEqual("0001045810", earnings.CentralIndexKey);
+            Assert.AreEqual("NVIDIA CORP", earnings.RegistrantName);
+            Assert.AreEqual(1500000000000m, earnings.MarketCap);
+            Assert.AreEqual("2024-01-28", earnings.FiscalQuarterEndDate);
             Assert.AreEqual(5.16m, earnings.EarningsPerShare);
             Assert.AreEqual(4.64m, earnings.EarningsPerShareForecast);
+            Assert.AreEqual(11.2m, earnings.PercentageSurprise);
             Assert.AreEqual(35, earnings.NumberOfForecasts);
+            Assert.AreEqual(new DateTime(2024, 2, 21, 17, 0, 0), earnings.ConferenceCallTime);
         }
     }
 }

@@ -23,9 +23,12 @@ namespace FinancialData.Tests.Entities
             using var doc = JsonDocument.Parse(json);
             var optionPrice = FinancialDataSerializer.Instance.Deserialize<OptionPrice>(doc);
             Assert.AreEqual("AAPL240119C00180000", optionPrice.ContractName);
+            Assert.AreEqual(new DateOnly(2024, 1, 15), optionPrice.Date);
             Assert.AreEqual(8.50m, optionPrice.Open);
             Assert.AreEqual(9.20m, optionPrice.High);
+            Assert.AreEqual(8.30m, optionPrice.Low);
             Assert.AreEqual(9.00m, optionPrice.Close);
+            Assert.AreEqual(5000m, optionPrice.Volume);
         }
     }
 }

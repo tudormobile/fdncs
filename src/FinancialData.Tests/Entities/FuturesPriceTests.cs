@@ -23,9 +23,12 @@ namespace FinancialData.Tests.Entities
             using var doc = JsonDocument.Parse(json);
             var futuresPrice = FinancialDataSerializer.Instance.Deserialize<FuturesPrice>(doc);
             Assert.AreEqual("ES", futuresPrice.TradingSymbol);
+            Assert.AreEqual(new DateOnly(2024, 1, 15), futuresPrice.Date);
             Assert.AreEqual(4800.50m, futuresPrice.Open);
             Assert.AreEqual(4825.75m, futuresPrice.High);
+            Assert.AreEqual(4795.25m, futuresPrice.Low);
             Assert.AreEqual(4820.00m, futuresPrice.Close);
+            Assert.AreEqual(2500000m, futuresPrice.Volume);
         }
     }
 }

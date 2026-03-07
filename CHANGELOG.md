@@ -8,9 +8,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Planned
-- Improved unit tests
 - Integration tests
-- Standard and Premium default implementations
+- Standard and Premium implementations
+
+## [0.2.0] - 2026-03-07
+### Added
+- Improved unit tests (100% coverage of library and entities)
+- Placeholders for Standard and Premium endpoints implemented and tested
 
 ## [0.1.0] - 2026-03-05
 ### Added

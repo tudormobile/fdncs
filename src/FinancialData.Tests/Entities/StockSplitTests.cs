@@ -21,6 +21,10 @@ namespace FinancialData.Tests.Entities
             using var doc = JsonDocument.Parse(json);
             var split = FinancialDataSerializer.Instance.Deserialize<StockSplit>(doc);
             Assert.AreEqual("TSLA", split.TradingSymbol);
+            Assert.AreEqual("0001318605", split.CentralIndexKey);
+            Assert.AreEqual("Tesla, Inc.", split.RegistrantName);
+            Assert.AreEqual(new DateOnly(2022, 8, 25), split.ExecutionDate);
+            Assert.AreEqual("3:1", split.SplitRatio);
         }
     }
 }

@@ -1,7 +1,5 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Text.Json;
 using Tudormobile.FinancialData.Entities;
-using Tudormobile.FinancialData;
 
 namespace FinancialData.Tests.Entities
 {
@@ -12,26 +10,33 @@ namespace FinancialData.Tests.Entities
         public void ExecutiveCompensation_Deserialize_FromJson_Works()
         {
             var json = @"{
-    ""trading_symbol"": ""AAPL"",
-    ""central_index_key"": ""0000320193"",
-    ""registrant_name"": ""Apple Inc."",
-    ""fiscal_year"": ""2023"",
-    ""executive_name"": ""Tim Cook"",
-    ""executive_title"": ""CEO"",
-    ""salary"": 3000000.0,
-    ""bonus"": 12000000.0,
-    ""stock_awards"": 82000000.0,
-    ""option_awards"": 0.0,
-    ""non_equity_incentive_plan_compensation"": 10000000.0,
-    ""all_other_compensation"": 1500000.0,
-    ""total_compensation"": 108500000.0
-}";
+    ""trading_symbol"": ""MSFT"",
+    ""central_index_key"": ""0000789019"",
+    ""registrant_name"": ""MICROSOFT CORP"",
+    ""executive_name"": ""Christopher D. Young"",
+    ""executive_position"": ""Executive Vice President"",
+    ""fiscal_year"": ""2024"",
+    ""salary"": 850000.0,
+    ""bonus"": 0.0,
+    ""stock_awards"": 9040931.0,
+    ""incentive_plan_compensation"": 2023680.0,
+    ""other_compensation"": 120092.0,
+    ""total_compensation"": 12034703.0
+  }";
             using var doc = JsonDocument.Parse(json);
             var compensation = FinancialDataSerializer.Instance.Deserialize<ExecutiveCompensation>(doc);
-            Assert.AreEqual("AAPL", compensation.TradingSymbol);
-            Assert.AreEqual("Tim Cook", compensation.ExecutiveName);
-            Assert.AreEqual(3000000m, compensation.Salary);
-            Assert.AreEqual(108500000m, compensation.TotalCompensation);
+            Assert.AreEqual("MSFT", compensation.TradingSymbol);
+            Assert.AreEqual("0000789019", compensation.CentralIndexKey);
+            Assert.AreEqual("MICROSOFT CORP", compensation.RegistrantName);
+            Assert.AreEqual("2024", compensation.FiscalYear);
+            Assert.AreEqual("Christopher D. Young", compensation.ExecutiveName);
+            Assert.AreEqual("Executive Vice President", compensation.ExecutivePosition);
+            Assert.AreEqual(850000m, compensation.Salary);
+            Assert.AreEqual(0m, compensation.Bonus);
+            Assert.AreEqual(9040931m, compensation.StockAwards);
+            Assert.AreEqual(2023680m, compensation.IncentivePlanCompensation);
+            Assert.AreEqual(120092m, compensation.OtherCompensation);
+            Assert.AreEqual(12034703m, compensation.TotalCompensation);
         }
     }
 }

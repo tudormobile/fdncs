@@ -63,4 +63,69 @@ public class FinancialDataResponseTests
         Assert.AreEqual(expectedError, actualError);
         Assert.IsFalse(actualIsSuccess);
     }
+
+    [TestMethod]
+    public void FinancialDataResponse_WithDataAndError_ShouldIndicateNoSuccess()
+    {
+        // Arrange
+        var data = "some data";
+        var error = "some error";
+        var apiResponse = new FinancialDataResponse<string>(data, error);
+
+        // Act & Assert
+        Assert.AreEqual(data, apiResponse.Data);
+        Assert.AreEqual(error, apiResponse.Error);
+        Assert.IsFalse(apiResponse.IsSuccess);
+    }
+
+    [TestMethod]
+    public void FinancialDataResponse_WithNullData_ShouldIndicateNoSuccess()
+    {
+        // Arrange
+        var apiResponse = new FinancialDataResponse<string>(data: null);
+
+        // Act & Assert
+        Assert.IsNull(apiResponse.Data);
+        Assert.IsNull(apiResponse.Error);
+        Assert.IsFalse(apiResponse.IsSuccess);
+    }
+
+    [TestMethod]
+    public void FinancialDataResponse_WithEmptyString_ShouldIndicateSuccess()
+    {
+        // Arrange
+        var apiResponse = new FinancialDataResponse<string>(data: string.Empty);
+
+        // Act & Assert
+        Assert.IsNotNull(apiResponse.Data);
+        Assert.AreEqual(string.Empty, apiResponse.Data);
+        Assert.IsNull(apiResponse.Error);
+        Assert.IsTrue(apiResponse.IsSuccess);
+    }
+
+    [TestMethod]
+    public async Task PremiumSubscriptionNotImplemented_ReturnsErrorResponse()
+    {
+        // Act
+        var response = await FinancialDataResponse<object>.PremiumSubscriptionNotImplemented();
+
+        // Assert
+        Assert.IsFalse(response.IsSuccess);
+        Assert.IsNull(response.Data);
+        Assert.IsNotNull(response.Error);
+        Assert.AreEqual("Premium subscription api not implemented.", response.Error);
+    }
+
+    [TestMethod]
+    public async Task StandardSubscriptionNotImplemented_ReturnsErrorResponse()
+    {
+        // Act
+        var response = await FinancialDataResponse<object>.StandardSubscriptionNotImplemented();
+
+        // Assert
+        Assert.IsFalse(response.IsSuccess);
+        Assert.IsNull(response.Data);
+        Assert.IsNotNull(response.Error);
+        Assert.AreEqual("Standard subscription api not implemented.", response.Error);
+    }
 }

@@ -61,3 +61,18 @@ public record ShortInterest
     /// </summary>
     public bool IsStockSplit { get; init; }
 }
+/*
+{
+    "trading_symbol": "MSFT",
+    "title_of_security": "Microsoft Corporation Common S",
+    "market_code": "NNM",
+    "settlement_date": "2024-11-15",
+    "shorted_securities": 56018482,
+    "previous_shorted_securities": 62516096,
+    "change_in_shorted_securities": -6497614,
+    "percentage_change_in_shorted_securities": -10.39,
+    "average_daily_volume": 22446377,
+    "days_to_cover": 2.5,
+    "is_stock_split": false
+  }
+*/

@@ -23,6 +23,7 @@ namespace FinancialData.Tests.Entities
             var etfQuotes = FinancialDataSerializer.Instance.Deserialize<EtfQuotes>(doc);
             Assert.AreEqual("SPY", etfQuotes.TradingSymbol);
             Assert.AreEqual("SPDR S&P 500 ETF Trust", etfQuotes.Description);
+            Assert.AreEqual(new DateTime(2025, 9, 2, 15, 59, 30), etfQuotes.Time);
             Assert.AreEqual(642.41m, etfQuotes.Price);
             Assert.AreEqual(2.14m, etfQuotes.Change);
             Assert.AreEqual(0.33m, etfQuotes.PercentageChange);
