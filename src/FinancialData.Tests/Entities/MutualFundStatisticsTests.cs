@@ -41,10 +41,30 @@ namespace FinancialData.Tests.Entities
             using var doc = JsonDocument.Parse(json);
             var mutualFundStatistics = FinancialDataSerializer.Instance.Deserialize<MutualFundStatistics>(doc);
             Assert.AreEqual("0000036405", mutualFundStatistics.CentralIndexKey);
+            Assert.AreEqual("VANGUARD INDEX FUNDS", mutualFundStatistics.RegistrantName);
+            Assert.AreEqual(new DateOnly(2025, 6, 30), mutualFundStatistics.PeriodOfReport);
+            Assert.AreEqual("Admiral Shares", mutualFundStatistics.FundName);
             Assert.AreEqual("VTSAX", mutualFundStatistics.FundSymbol);
+            Assert.AreEqual("S000002848", mutualFundStatistics.SeriesId);
+            Assert.AreEqual("C000007806", mutualFundStatistics.ClassId);
             Assert.AreEqual(1915212703487.01m, mutualFundStatistics.TotalAssets);
+            Assert.AreEqual(5763123365.99m, mutualFundStatistics.TotalLiabilities);
             Assert.AreEqual(1909449580121.02m, mutualFundStatistics.NetAssets);
             Assert.AreEqual(-0.6729m, mutualFundStatistics.ReturnPrecedingMonth1);
+            Assert.AreEqual(6.3455m, mutualFundStatistics.ReturnPrecedingMonth2);
+            Assert.AreEqual(5.07574m, mutualFundStatistics.ReturnPrecedingMonth3);
+            Assert.AreEqual(983065935.64m, mutualFundStatistics.RealizedGainPrecedingMonth1);
+            Assert.AreEqual(-11394591977.19m, mutualFundStatistics.ChangeInUnrealizedAppreciationPrecedingMonth1);
+            Assert.AreEqual(287029511.93m, mutualFundStatistics.RealizedGainPrecedingMonth2);
+            Assert.AreEqual(105734824564.66m, mutualFundStatistics.ChangeInUnrealizedAppreciationPrecedingMonth2);
+            Assert.AreEqual(2243886605.76m, mutualFundStatistics.RealizedGainPrecedingMonth3);
+            Assert.AreEqual(87596494350.2m, mutualFundStatistics.ChangeInUnrealizedAppreciationPrecedingMonth3);
+            Assert.AreEqual(30533447572.6504m, mutualFundStatistics.ShareSalePrecedingMonth1);
+            Assert.AreEqual(9354960674.63m, mutualFundStatistics.ShareRedemptionPrecedingMonth1);
+            Assert.AreEqual(9024030148.45996m, mutualFundStatistics.ShareSalePrecedingMonth2);
+            Assert.AreEqual(9833704993.95m, mutualFundStatistics.ShareRedemptionPrecedingMonth2);
+            Assert.AreEqual(12681244786.0796m, mutualFundStatistics.ShareSalePrecedingMonth3);
+            Assert.AreEqual(12999259996.1m, mutualFundStatistics.ShareRedemptionPrecedingMonth3);
         }
     }
 }

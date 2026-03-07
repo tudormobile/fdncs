@@ -23,6 +23,7 @@ namespace FinancialData.Tests.Entities
             using var doc = JsonDocument.Parse(json);
             var minutePrice = FinancialDataSerializer.Instance.Deserialize<MinutePrice>(doc);
             Assert.AreEqual("AAPL", minutePrice.TradingSymbol);
+            Assert.AreEqual(new DateTime(2024, 1, 15, 14, 30, 0), minutePrice.Time);
             Assert.AreEqual(185.50m, minutePrice.Open);
             Assert.AreEqual(185.75m, minutePrice.High);
             Assert.AreEqual(185.40m, minutePrice.Low);

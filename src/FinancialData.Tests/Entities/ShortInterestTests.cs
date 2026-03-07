@@ -27,9 +27,16 @@ namespace FinancialData.Tests.Entities
             using var doc = JsonDocument.Parse(json);
             var shortInterest = FinancialDataSerializer.Instance.Deserialize<ShortInterest>(doc);
             Assert.AreEqual("GME", shortInterest.TradingSymbol);
+            Assert.AreEqual("GAMESTOP CORP", shortInterest.TitleOfSecurity);
+            Assert.AreEqual("NYSE", shortInterest.MarketCode);
+            Assert.AreEqual(new DateOnly(2024, 1, 15), shortInterest.SettlementDate);
             Assert.AreEqual(45000000m, shortInterest.ShortedSecurities);
+            Assert.AreEqual(50000000m, shortInterest.PreviousShortedSecurities);
+            Assert.AreEqual(-5000000m, shortInterest.ChangeInShortedSecurities);
+            Assert.AreEqual(-10.0m, shortInterest.PercentageChangeInShortedSecurities);
             Assert.AreEqual(8500000m, shortInterest.AverageDailyVolume);
             Assert.AreEqual(5.29m, shortInterest.DaysToCover);
+            Assert.IsFalse(shortInterest.IsStockSplit);
         }
     }
 }

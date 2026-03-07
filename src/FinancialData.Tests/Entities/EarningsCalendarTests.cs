@@ -12,15 +12,21 @@ namespace FinancialData.Tests.Entities
         public void EarningsCalendar_Deserialize_FromJson_Works()
         {
             var json = @"{
-    ""trading_symbol"": ""AAPL"",
-    ""registrant_name"": ""Apple Inc."",
-    ""report_date"": ""2024-02-01""
+    ""trading_symbol"": ""XOM"",
+    ""registrant_name"": ""EXXON MOBIL CORP"",
+    ""fiscal_quarter_end_date"": ""2025-09"",
+    ""report_date"": ""2025-10-31"",
+    ""conference_call_time"": ""2025-10-31 08:30:00"",
+    ""earnings_per_share_forecast"": 1.78
 }";
             using var doc = JsonDocument.Parse(json);
             var calendar = FinancialDataSerializer.Instance.Deserialize<EarningsCalendar>(doc);
-            Assert.AreEqual("AAPL", calendar.TradingSymbol);
-            Assert.AreEqual("Apple Inc.", calendar.RegistrantName);
-            Assert.AreEqual(new DateOnly(2024, 2, 1), calendar.ReportDate);
+            Assert.AreEqual("XOM", calendar.TradingSymbol);
+            Assert.AreEqual("EXXON MOBIL CORP", calendar.RegistrantName);
+            Assert.AreEqual("2025-09", calendar.FiscalQuarterEndDate);
+            Assert.AreEqual(new DateOnly(2025, 10, 31), calendar.ReportDate);
+            Assert.AreEqual(new DateTime(2025, 10, 31, 8, 30, 0), calendar.ConferenceCallTime);
+            Assert.AreEqual(1.78m, calendar.EarningsPerShareForecast);
         }
     }
 }

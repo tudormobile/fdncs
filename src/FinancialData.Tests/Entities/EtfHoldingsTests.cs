@@ -43,10 +43,32 @@ namespace FinancialData.Tests.Entities
             using var doc = JsonDocument.Parse(json);
             var etfHoldings = FinancialDataSerializer.Instance.Deserialize<EtfHoldings>(doc);
             Assert.AreEqual("0000884394", etfHoldings.CentralIndexKey);
+            Assert.AreEqual("SPDR S&P 500 ETF TRUST", etfHoldings.RegistrantName);
+            Assert.AreEqual(new DateOnly(2025, 6, 30), etfHoldings.PeriodOfReport);
+            Assert.AreEqual("SPDR S&P 500 ETF TRUST", etfHoldings.EtfName);
             Assert.AreEqual("SPY", etfHoldings.EtfSymbol);
+            Assert.AreEqual("N/A", etfHoldings.SeriesId);
+            Assert.AreEqual("N/A", etfHoldings.ClassId);
+            Assert.AreEqual("Johnson & Johnson", etfHoldings.IssuerName);
+            Assert.AreEqual("549300G0CFPGEF6X2043", etfHoldings.LeiNumber);
+            Assert.AreEqual("Johnson & Johnson", etfHoldings.TitleOfSecurity);
             Assert.AreEqual("JNJ", etfHoldings.TradingSymbol);
+            Assert.AreEqual("478160104", etfHoldings.CusipNumber);
+            Assert.AreEqual("US4781601046", etfHoldings.IsinNumber);
+            Assert.AreEqual(29181009m, etfHoldings.AmountOfUnits);
+            Assert.AreEqual("NS", etfHoldings.DescriptionOfUnits);
+            Assert.AreEqual("USD", etfHoldings.DenominationCurrency);
             Assert.AreEqual(4457399124.75m, etfHoldings.ValueInUsd);
-            Assert.AreEqual(false, etfHoldings.IsRestrictedSecurity);
+            Assert.AreEqual(0.699985772661m, etfHoldings.PercentageValueComparedToAssets);
+            Assert.AreEqual("Long", etfHoldings.PayoffProfile);
+            Assert.AreEqual("EC", etfHoldings.AssetType);
+            Assert.AreEqual("CORP", etfHoldings.IssuerType);
+            Assert.AreEqual("US", etfHoldings.CountryOfIssuerOrInvestment);
+            Assert.IsFalse(etfHoldings.IsRestrictedSecurity);
+            Assert.AreEqual(1, etfHoldings.FairValueLevel);
+            Assert.IsFalse(etfHoldings.IsCashCollateral);
+            Assert.IsFalse(etfHoldings.IsNonCashCollateral);
+            Assert.IsFalse(etfHoldings.IsLoanByFund);
         }
     }
 }

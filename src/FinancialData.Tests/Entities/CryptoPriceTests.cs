@@ -24,9 +24,13 @@ namespace FinancialData.Tests.Entities
             using var doc = JsonDocument.Parse(json);
             var cryptoPrice = FinancialDataSerializer.Instance.Deserialize<CryptoPrice>(doc);
             Assert.AreEqual("ETH-USD", cryptoPrice.TradingSymbol);
+            Assert.AreEqual(new DateOnly(2024, 1, 15), cryptoPrice.Date);
             Assert.AreEqual(2450.50m, cryptoPrice.Open);
             Assert.AreEqual(2485.75m, cryptoPrice.High);
+            Assert.AreEqual(2440.25m, cryptoPrice.Low);
             Assert.AreEqual(2475.00m, cryptoPrice.Close);
+            Assert.AreEqual(8500000000.0m, cryptoPrice.Volume);
+            Assert.AreEqual(295000000000.0m, cryptoPrice.MarketCap);
         }
     }
 }

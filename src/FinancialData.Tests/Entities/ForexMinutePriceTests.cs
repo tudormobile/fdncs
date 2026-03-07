@@ -22,8 +22,10 @@ namespace FinancialData.Tests.Entities
             using var doc = JsonDocument.Parse(json);
             var forexMinutePrice = FinancialDataSerializer.Instance.Deserialize<ForexMinutePrice>(doc);
             Assert.AreEqual("EUR/USD", forexMinutePrice.TradingSymbol);
+            Assert.AreEqual(new DateTime(2024, 1, 15, 14, 30, 0), forexMinutePrice.Time);
             Assert.AreEqual(1.0890m, forexMinutePrice.Open);
             Assert.AreEqual(1.0893m, forexMinutePrice.High);
+            Assert.AreEqual(1.0888m, forexMinutePrice.Low);
             Assert.AreEqual(1.0891m, forexMinutePrice.Close);
         }
     }

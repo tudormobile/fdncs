@@ -56,3 +56,17 @@ public record MarketCap
     /// </summary>
     public decimal PercentageChangeInSharesOutstanding { get; init; }
 }
+/* Ref:
+{
+    "trading_symbol": "MSFT",
+    "central_index_key": "0000789019",
+    "registrant_name": "MICROSOFT CORP",
+    "fiscal_year": "2024",
+    "market_cap": 2800000000000.0,
+    "change_in_market_cap": 1000000000000.0,
+    "percentage_change_in_market_cap": 55.5555555555556,
+    "shares_outstanding": 7433038381,
+    "change_in_shares_outstanding": 3274659,
+    "percentage_change_in_shares_outstanding": 0.0440748740138738
+  }
+*/

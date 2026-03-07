@@ -29,7 +29,7 @@ public record ExecutiveCompensation
     /// <summary>
     /// Gets the position or title of the executive.
     /// </summary>
-    public string? ExecutiveTitle { get; init; }
+    public string? ExecutivePosition { get; init; }
 
     /// <summary>
     /// Gets the fiscal year.
@@ -52,19 +52,14 @@ public record ExecutiveCompensation
     public decimal StockAwards { get; init; }
 
     /// <summary>
-    /// Gets the value of option awards.
+    /// Gets the incentive plan compensation.
     /// </summary>
-    public decimal OptionAwards { get; init; }
+    public decimal IncentivePlanCompensation { get; init; }
 
     /// <summary>
-    /// Gets the non-equity incentive plan compensation.
+    /// Gets other compensation.
     /// </summary>
-    public decimal NonEquityIncentivePlanCompensation { get; init; }
-
-    /// <summary>
-    /// Gets all other compensation.
-    /// </summary>
-    public decimal AllOtherCompensation { get; init; }
+    public decimal OtherCompensation { get; init; }
 
     /// <summary>
     /// Gets the total compensation.
@@ -73,19 +68,17 @@ public record ExecutiveCompensation
 }
 /* ref: https://financialdata.net/documentation#executive_compensation
 {
-    "trading_symbol": "AAPL",
-    "central_index_key": "0000320193",
-    "registrant_name": "Apple Inc.",
-    "fiscal_year": "2023",
-    "executive_name": "Tim Cook",
-    "executive_title": "CEO",
-    "salary": 3000000.0,
-    "bonus": 12000000.0,
-    "stock_awards": 82000000.0,
-    "option_awards": 0.0,
-    "non_equity_incentive_plan_compensation": 10000000.0,
-    "all_other_compensation": 1500000.0,
-    "total_compensation": 108500000.0
-}
-*/
+    "trading_symbol": "MSFT",
+    "central_index_key": "0000789019",
+    "registrant_name": "MICROSOFT CORP",
+    "executive_name": "Christopher D. Young",
+    "executive_position": "Executive Vice President",
+    "fiscal_year": "2024",
+    "salary": 850000.0,
+    "bonus": 0.0,
+    "stock_awards": 9040931.0,
+    "incentive_plan_compensation": 2023680.0,
+    "other_compensation": 120092.0,
+    "total_compensation": 12034703.0
+  }*/
 

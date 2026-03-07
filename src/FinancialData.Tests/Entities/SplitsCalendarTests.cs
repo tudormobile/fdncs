@@ -12,14 +12,17 @@ namespace FinancialData.Tests.Entities
         public void SplitsCalendar_Deserialize_FromJson_Works()
         {
             var json = @"{
-    ""trading_symbol"": ""NVDA"",
-    ""central_index_key"": ""0001045810"",
-    ""registrant_name"": ""NVIDIA CORP"",
-    ""execution_date"": ""2024-06-10""
-}";
+    ""trading_symbol"": ""LINK"",
+    ""registrant_name"": ""INTERLINK ELECTRONICS INC"",
+    ""execution_date"": ""2025-10-29"",
+    ""multiplier"": 1.5
+  }";
             using var doc = JsonDocument.Parse(json);
             var calendar = FinancialDataSerializer.Instance.Deserialize<SplitsCalendar>(doc);
-            Assert.AreEqual("NVDA", calendar.TradingSymbol);
+            Assert.AreEqual("LINK", calendar.TradingSymbol);
+            Assert.AreEqual("INTERLINK ELECTRONICS INC", calendar.RegistrantName);
+            Assert.AreEqual(new DateOnly(2025, 10, 29), calendar.ExecutionDate);
+            Assert.AreEqual(1.5m, calendar.Multiplier);
         }
     }
 }

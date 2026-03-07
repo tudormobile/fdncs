@@ -25,6 +25,9 @@ namespace FinancialData.Tests.Entities
             using var doc = JsonDocument.Parse(json);
             var esgScore = FinancialDataSerializer.Instance.Deserialize<EsgScore>(doc);
             Assert.AreEqual("AAPL", esgScore.TradingSymbol);
+            Assert.AreEqual("0000320193", esgScore.CentralIndexKey);
+            Assert.AreEqual("Apple Inc.", esgScore.RegistrantName);
+            Assert.AreEqual(new DateOnly(2024, 1, 15), esgScore.Date);
             Assert.AreEqual(82.5m, esgScore.TotalScore);
             Assert.AreEqual(85.0m, esgScore.EnvironmentalScore);
             Assert.AreEqual(80.0m, esgScore.SocialScore);

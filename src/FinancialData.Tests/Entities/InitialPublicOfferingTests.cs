@@ -23,6 +23,9 @@ namespace FinancialData.Tests.Entities
             using var doc = JsonDocument.Parse(json);
             var ipo = FinancialDataSerializer.Instance.Deserialize<InitialPublicOffering>(doc);
             Assert.AreEqual("ABNB", ipo.TradingSymbol);
+            Assert.AreEqual("Airbnb, Inc.", ipo.RegistrantName);
+            Assert.AreEqual("NASDAQ", ipo.Exchange);
+            Assert.AreEqual(new DateOnly(2020, 12, 10), ipo.PricingDate);
             Assert.AreEqual(68.00m, ipo.SharePrice);
             Assert.AreEqual(51900000m, ipo.SharesOffered);
             Assert.AreEqual(3500000000m, ipo.OfferingValue);

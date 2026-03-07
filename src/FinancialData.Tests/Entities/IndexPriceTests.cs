@@ -26,7 +26,9 @@ namespace FinancialData.Tests.Entities
             Assert.AreEqual(new DateOnly(2025, 6, 13), indexPrice.Date);
             Assert.AreEqual(6000.56m, indexPrice.Open);
             Assert.AreEqual(6026.16m, indexPrice.High);
+            Assert.AreEqual(5963.21m, indexPrice.Low);
             Assert.AreEqual(5976.97m, indexPrice.Close);
+            Assert.AreEqual(5258910000.0m, indexPrice.Volume);
         }
     }
 }

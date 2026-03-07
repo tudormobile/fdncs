@@ -23,10 +23,12 @@ namespace FinancialData.Tests.Entities
             using var doc = JsonDocument.Parse(json);
             var latestPrice = FinancialDataSerializer.Instance.Deserialize<LatestPrice>(doc);
             Assert.AreEqual("TSLA", latestPrice.TradingSymbol);
+            Assert.AreEqual(new DateTime(2024, 1, 15, 15, 45, 0), latestPrice.Time);
             Assert.AreEqual(245.30m, latestPrice.Open);
             Assert.AreEqual(246.80m, latestPrice.High);
             Assert.AreEqual(244.90m, latestPrice.Low);
             Assert.AreEqual(246.50m, latestPrice.Close);
+            Assert.AreEqual(85000m, latestPrice.Volume);
         }
     }
 }

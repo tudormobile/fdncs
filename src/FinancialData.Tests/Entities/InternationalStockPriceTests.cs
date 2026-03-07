@@ -24,10 +24,12 @@ namespace FinancialData.Tests.Entities
             using var doc = JsonDocument.Parse(json);
             var price = FinancialDataSerializer.Instance.Deserialize<InternationalStockPrice>(doc);
             Assert.AreEqual("SHEL.L", price.TradingSymbol);
+            Assert.AreEqual(new DateOnly(2024, 1, 15), price.Date);
             Assert.AreEqual(2450.50m, price.Open);
             Assert.AreEqual(2475.00m, price.High);
             Assert.AreEqual(2445.00m, price.Low);
             Assert.AreEqual(2470.00m, price.Close);
+            Assert.AreEqual(5000000m, price.Volume);
         }
     }
 }

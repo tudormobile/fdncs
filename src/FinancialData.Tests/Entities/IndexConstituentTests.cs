@@ -27,6 +27,7 @@ namespace FinancialData.Tests.Entities
             Assert.AreEqual("COIN", indexConstituent.ConstituentSymbol);
             Assert.AreEqual("Coinbase", indexConstituent.ConstituentName);
             Assert.AreEqual("Financials", indexConstituent.Sector);
+            Assert.AreEqual("Financial Exchanges & Data", indexConstituent.Industry);
             Assert.AreEqual(new DateOnly(2025, 5, 19), indexConstituent.DateAdded);
         }
     }

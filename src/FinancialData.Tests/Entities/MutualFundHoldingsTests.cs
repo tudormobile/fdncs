@@ -43,10 +43,32 @@ namespace FinancialData.Tests.Entities
             using var doc = JsonDocument.Parse(json);
             var mutualFundHoldings = FinancialDataSerializer.Instance.Deserialize<MutualFundHoldings>(doc);
             Assert.AreEqual("0000036405", mutualFundHoldings.CentralIndexKey);
+            Assert.AreEqual("VANGUARD INDEX FUNDS", mutualFundHoldings.RegistrantName);
+            Assert.AreEqual(new DateOnly(2025, 6, 30), mutualFundHoldings.PeriodOfReport);
+            Assert.AreEqual("Admiral Shares", mutualFundHoldings.FundName);
             Assert.AreEqual("VTSAX", mutualFundHoldings.FundSymbol);
+            Assert.AreEqual("S000002848", mutualFundHoldings.SeriesId);
+            Assert.AreEqual("C000007806", mutualFundHoldings.ClassId);
+            Assert.AreEqual("Frequency Electronics Inc", mutualFundHoldings.IssuerName);
+            Assert.AreEqual("549300S56SO2JB5JBE31", mutualFundHoldings.LeiNumber);
+            Assert.AreEqual("FREQUENCY ELECT", mutualFundHoldings.TitleOfSecurity);
             Assert.AreEqual("FEIM", mutualFundHoldings.TradingSymbol);
+            Assert.AreEqual("358010106", mutualFundHoldings.CusipNumber);
+            Assert.AreEqual("US3580101067", mutualFundHoldings.IsinNumber);
+            Assert.AreEqual(228179m, mutualFundHoldings.AmountOfUnits);
+            Assert.AreEqual("NS", mutualFundHoldings.DescriptionOfUnits);
+            Assert.AreEqual("USD", mutualFundHoldings.DenominationCurrency);
             Assert.AreEqual(5181945.09m, mutualFundHoldings.ValueInUsd);
-            Assert.AreEqual(true, mutualFundHoldings.IsLoanByFund);
+            Assert.AreEqual(0.000271384232m, mutualFundHoldings.PercentageValueComparedToAssets);
+            Assert.AreEqual("Long", mutualFundHoldings.PayoffProfile);
+            Assert.AreEqual("EC", mutualFundHoldings.AssetType);
+            Assert.AreEqual("CORP", mutualFundHoldings.IssuerType);
+            Assert.AreEqual("US", mutualFundHoldings.CountryOfIssuerOrInvestment);
+            Assert.IsFalse(mutualFundHoldings.IsRestrictedSecurity);
+            Assert.AreEqual(1, mutualFundHoldings.FairValueLevel);
+            Assert.IsFalse(mutualFundHoldings.IsCashCollateral);
+            Assert.IsFalse(mutualFundHoldings.IsNonCashCollateral);
+            Assert.IsTrue(mutualFundHoldings.IsLoanByFund);
         }
     }
 }

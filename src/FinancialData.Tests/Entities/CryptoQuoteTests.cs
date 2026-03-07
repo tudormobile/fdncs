@@ -22,6 +22,7 @@ namespace FinancialData.Tests.Entities
             using var doc = JsonDocument.Parse(json);
             var cryptoQuote = FinancialDataSerializer.Instance.Deserialize<CryptoQuote>(doc);
             Assert.AreEqual("BTC-USD", cryptoQuote.TradingSymbol);
+            Assert.AreEqual(new DateTime(2024, 1, 15, 14, 30, 0), cryptoQuote.Time);
             Assert.AreEqual(42500.75m, cryptoQuote.Price);
             Assert.AreEqual(15000000000m, cryptoQuote.Volume);
             Assert.AreEqual(830000000000m, cryptoQuote.MarketCap);

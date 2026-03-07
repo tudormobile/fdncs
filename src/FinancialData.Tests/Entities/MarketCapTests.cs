@@ -1,7 +1,5 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Text.Json;
 using Tudormobile.FinancialData.Entities;
-using Tudormobile.FinancialData;
 
 namespace FinancialData.Tests.Entities
 {
@@ -27,7 +25,14 @@ namespace FinancialData.Tests.Entities
             var marketCap = FinancialDataSerializer.Instance.Deserialize<MarketCap>(doc);
             Assert.AreEqual("MSFT", marketCap.TradingSymbol);
             Assert.AreEqual("0000789019", marketCap.CentralIndexKey);
+            Assert.AreEqual("MICROSOFT CORP", marketCap.RegistrantName);
+            Assert.AreEqual("2024", marketCap.FiscalYear);
             Assert.AreEqual(3100000000000m, marketCap.MarketCapValue);
+            Assert.AreEqual(50000000000m, marketCap.ChangeInMarketCap);
+            Assert.AreEqual(1.64m, marketCap.PercentageChangeInMarketCap);
+            Assert.AreEqual(7430000000m, marketCap.SharesOutstanding);
+            Assert.AreEqual(0m, marketCap.ChangeInSharesOutstanding);
+            Assert.AreEqual(0m, marketCap.PercentageChangeInSharesOutstanding);
         }
     }
 }

@@ -24,8 +24,13 @@ namespace FinancialData.Tests.Entities
             using var doc = JsonDocument.Parse(json);
             var dividend = FinancialDataSerializer.Instance.Deserialize<Dividend>(doc);
             Assert.AreEqual("KO", dividend.TradingSymbol);
-            Assert.AreEqual(0.485m, dividend.Amount);
+            Assert.AreEqual("COCA COLA CO", dividend.RegistrantName);
             Assert.AreEqual("Quarterly", dividend.Type);
+            Assert.AreEqual(0.485m, dividend.Amount);
+            Assert.AreEqual(new DateOnly(2024, 2, 13), dividend.DeclarationDate);
+            Assert.AreEqual(new DateOnly(2024, 3, 14), dividend.ExDate);
+            Assert.AreEqual(new DateOnly(2024, 3, 15), dividend.RecordDate);
+            Assert.AreEqual(new DateOnly(2024, 4, 1), dividend.PaymentDate);
         }
     }
 }

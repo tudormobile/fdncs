@@ -26,7 +26,9 @@ namespace FinancialData.Tests.Entities
             Assert.AreEqual(new DateOnly(2024, 12, 3), etfPrices.Date);
             Assert.AreEqual(603.39m, etfPrices.Open);
             Assert.AreEqual(604.16m, etfPrices.High);
+            Assert.AreEqual(602.341m, etfPrices.Low);
             Assert.AreEqual(603.91m, etfPrices.Close);
+            Assert.AreEqual(26906630.0m, etfPrices.Volume);
         }
     }
 }
